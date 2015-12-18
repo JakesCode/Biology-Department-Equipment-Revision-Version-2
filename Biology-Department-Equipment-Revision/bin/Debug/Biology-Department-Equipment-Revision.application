@@ -14,14 +14,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Biology-Department-Equipment-Revision.exe.manifest" size="3633">
+    <dependentAssembly dependencyType="install" codebase="Biology-Department-Equipment-Revision.exe.manifest" size="5601">
       <assemblyIdentity name="Biology-Department-Equipment-Revision.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uRc7xJpcrOrOyr/eiH+QULDrawhJBb+27fD6AWWhkpc=</dsig:DigestValue>
+        <dsig:DigestValue>3pAtn4iCdv7+zJBy889SV/3lhJ6+tLyn8I64Hgn8TIw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

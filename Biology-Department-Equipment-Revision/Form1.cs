@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using DDay.iCal;
 
 namespace Biology_Department_Equipment_Revision
 {
@@ -42,7 +43,6 @@ namespace Biology_Department_Equipment_Revision
         {
             Object selectedTeacher = teacher.SelectedItem;
             String selectedDate = calendar.Value.ToString("dd/MM");
-            String selectedTime = time.Value.ToShortTimeString();
             Object selectedYearGroup = yearGroup.SelectedItem;
             Object selectedGroup = groups.SelectedItem;
             Object selectedPeriod = period.SelectedItem;
@@ -50,49 +50,75 @@ namespace Biology_Department_Equipment_Revision
             Object selectedHazcards = hazcards.Text;
             Boolean selectedRiskAssessment = riskAssessment.Checked;
             /* (selectedTeacher.ToString() != null && selectedYearGroup.ToString() != null && selectedGroup.ToString() != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != "Enter Equipment here...." && selectedHazcards.ToString() != "Enter Hazcards here...." && selectedRiskAssessment) */
-            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != "Enter Equipment here...." && selectedHazcards.ToString() != "Enter Hazcards here...." && selectedRiskAssessment)
+            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != "Enter Hazcards here...." && selectedRiskAssessment)
             {
                 /* With thanks to http://stackoverflow.com/questions/19911230/sending-email-through-outlook-2010-via-c-sharp */
                 Microsoft.Office.Interop.Outlook.Application app = new Microsoft.Office.Interop.Outlook.Application();
                 Microsoft.Office.Interop.Outlook.MailItem mailItem = app.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
                 mailItem.Subject = "Practical Request from " + selectedTeacher.ToString() + " on " + selectedDate;
                 mailItem.To = "technicians@gsal.org.uk";
-                mailItem.HTMLBody = (@selectedTeacher + " has requested the following equipment on " + selectedDate + " at " + selectedTime + ":<br><h1 style='color:blue'> " + selectedEquipment + "</h1>");
+                mailItem.HTMLBody = (@selectedTeacher + " has requested the following equipment on " + selectedDate + " during " + selectedPeriod + ":<br><h1 style='color:blue'> " + selectedEquipment + "</h1>");
                 mailItem.Importance = Outlook.OlImportance.olImportanceHigh;
 
-                StringBuilder str = new StringBuilder();
-                str.AppendLine("BEGIN:VCALENDAR");
-                str.AppendLine("PRODID:-//Schedule a Meeting");
-                str.AppendLine("VERSION:2.0");
-                str.AppendLine("METHOD:REQUEST");
-                str.AppendLine("BEGIN:VEVENT");
-                str.AppendLine(string.Format("DTSTART:{0:yyyyMMddTHHmmssZ}", DateTime.Now.AddMinutes(+10)));
-                str.AppendLine(string.Format("DTSTAMP:{0:yyyyMMddTHHmmssZ}", DateTime.UtcNow));
-                str.AppendLine(string.Format("DTEND:{0:yyyyMMddTHHmmssZ}", DateTime.Now.AddMinutes(+60)));
-                str.AppendLine("LOCATION: GSAL");
-                str.AppendLine(string.Format("UID:{0}", Guid.NewGuid()));
-                str.AppendLine(string.Format("DESCRIPTION:{0}", mailItem.HTMLBody));
-                str.AppendLine(string.Format("X-ALT-DESC;FMTTYPE=text/html:{0}", mailItem.HTMLBody));
-                str.AppendLine(string.Format("SUMMARY:{0}", mailItem.Subject));
-                str.AppendLine(string.Format("ORGANIZER:MAILTO:{0}", "Null"));
+                string theTime = "";
+                switch (selectedPeriod.ToString())
+                {
+                    case "Period 1":
+                        theTime = "09:00";
+                        break;
 
-                /* str.AppendLine("BEGIN:VALARM");
-                str.AppendLine("TRIGGER:-PT15M");
-                str.AppendLine("ACTION:DISPLAY");
-                str.AppendLine("DESCRIPTION:Reminder");
-                str.AppendLine("END:VALARM"); */
-                str.AppendLine("END:VEVENT");
-                str.AppendLine("END:VCALENDAR");
+                    case "Period 2":
+                        theTime = "09:55";
+                        break;
+
+                    case "Period 3":
+                        theTime = "11:05";
+                        break;
+
+                    case "Period 4":
+                        theTime = "12:00";
+                        break;
+
+                    case "Period 5":
+                        theTime = "2:10";
+                        break;
+
+                    case "Period 6":
+                        theTime = "3:00";
+                        break;
+                }
+
+                string schLocation = "";
+                string schSubject = mailItem.Subject;
+                string schDescription = "";
+                System.DateTime schBeginDate = Convert.ToDateTime(selectedDate);
+                System.DateTime schEndDate = Convert.ToDateTime(selectedDate);
+                String[] contents = { "BEGIN:VCALENDAR",
+                "PRODID: -//Flo Inc.//FloSoft//EN",
+                "BEGIN: VEVENT",
+                "DTSTART:" +schBeginDate.ToUniversalTime().ToString("yyyyMMdd\\THHmmss\\Z") + theTime,
+                "DTEND:" +schEndDate.ToUniversalTime().ToString("yyyyMMdd\\THHmmss\\Z") + theTime,
+                "LOCATION:" +schLocation,
+                "DESCRIPTION; ENCODING = QUOTED - PRINTABLE:" +schDescription,
+                "SUMMARY:" +schSubject, "PRIORITY: 3",
+                "END: VEVENT", "END: VCALENDAR" };
 
                 string exeRuntimeDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                System.IO.StreamWriter file = new System.IO.StreamWriter("reminder.ics");
-                file.WriteLine(str);
 
-                String whereTheIcsIs = exeRuntimeDirectory += "\reminder.ics";
-                MessageBox.Show(whereTheIcsIs);
+                System.IO.DirectoryInfo dr = new System.IO.DirectoryInfo(exeRuntimeDirectory);
+                if (!dr.Exists)
+                {
+                    dr.Create();
+                }
+                System.IO.File.WriteAllLines(exeRuntimeDirectory + "\\" +"reminder2.ics", contents);
+
+                String whereTheIcsIs = exeRuntimeDirectory += "\\reminder2.ics";
                 mailItem.Attachments.Add(whereTheIcsIs);
 
                 mailItem.Display(true);
+
+                MessageBox.Show("Your request has been sent successfully.");
+                System.Windows.Forms.Application.Exit();
             }
             else
             {

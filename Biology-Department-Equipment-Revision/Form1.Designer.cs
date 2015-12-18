@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.teacher = new System.Windows.Forms.ComboBox();
             this.calendar = new System.Windows.Forms.DateTimePicker();
-            this.time = new System.Windows.Forms.DateTimePicker();
             this.yearGroup = new System.Windows.Forms.ComboBox();
             this.groups = new System.Windows.Forms.ComboBox();
             this.period = new System.Windows.Forms.ComboBox();
@@ -42,6 +41,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.riskAssessment = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +51,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(21, 9);
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(556, 32);
+            this.label1.Size = new System.Drawing.Size(594, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Biology Department Equipment Revision";
+            this.label1.Text = "Biology Department Equipment Requisition";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // teacher
@@ -83,22 +83,11 @@
             this.calendar.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar.CustomFormat = "dd/MM";
             this.calendar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.calendar.Location = new System.Drawing.Point(188, 63);
+            this.calendar.Location = new System.Drawing.Point(188, 62);
             this.calendar.Name = "calendar";
-            this.calendar.Size = new System.Drawing.Size(109, 20);
+            this.calendar.Size = new System.Drawing.Size(227, 20);
             this.calendar.TabIndex = 2;
             this.calendar.Value = new System.DateTime(2015, 12, 18, 0, 0, 0, 0);
-            // 
-            // time
-            // 
-            this.time.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time.CustomFormat = "HH:mm";
-            this.time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.time.Location = new System.Drawing.Point(303, 62);
-            this.time.Name = "time";
-            this.time.ShowUpDown = true;
-            this.time.Size = new System.Drawing.Size(112, 20);
-            this.time.TabIndex = 3;
             // 
             // yearGroup
             // 
@@ -156,12 +145,11 @@
             // equipment
             // 
             this.equipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipment.Location = new System.Drawing.Point(188, 101);
+            this.equipment.Location = new System.Drawing.Point(188, 127);
             this.equipment.Multiline = true;
             this.equipment.Name = "equipment";
-            this.equipment.Size = new System.Drawing.Size(227, 152);
+            this.equipment.Size = new System.Drawing.Size(227, 126);
             this.equipment.TabIndex = 7;
-            this.equipment.Text = "Enter Equipment here....";
             // 
             // hazcards
             // 
@@ -212,12 +200,23 @@
             this.riskAssessment.Text = "I have carried out a risk assessment.";
             this.riskAssessment.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(216, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Equipment Needed....";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(600, 300);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.riskAssessment);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.hazcards);
@@ -227,14 +226,13 @@
             this.Controls.Add(this.period);
             this.Controls.Add(this.groups);
             this.Controls.Add(this.yearGroup);
-            this.Controls.Add(this.time);
             this.Controls.Add(this.calendar);
             this.Controls.Add(this.teacher);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Biology Department Equipment Revision";
+            this.Text = "Biology Department Equipment Requisition";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -247,7 +245,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox teacher;
         private System.Windows.Forms.DateTimePicker calendar;
-        private System.Windows.Forms.DateTimePicker time;
         private System.Windows.Forms.ComboBox yearGroup;
         private System.Windows.Forms.ComboBox groups;
         private System.Windows.Forms.ComboBox period;
@@ -257,6 +254,7 @@
         private System.Windows.Forms.TextBox hazcards;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.CheckBox riskAssessment;
+        private System.Windows.Forms.Label label2;
     }
 }
 
