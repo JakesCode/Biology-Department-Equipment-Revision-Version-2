@@ -1,0 +1,10 @@
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\bin\Debug\Biology-Department-Equipment-Revision.exe.config
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology-Department-Equipment-Revision.csprojResolveAssemblyReference.cache
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology_Department_Equipment_Revision.Form1.resources
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology_Department_Equipment_Revision.Properties.Resources.resources
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology-Department-Equipment-Revision.csproj.GenerateResource.Cache
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\bin\Debug\Biology-Department-Equipment-Revision.exe
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\bin\Debug\Biology-Department-Equipment-Revision.pdb
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology-Department-Equipment-Revision.exe
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology-Department-Equipment-Revision.pdb
+c:\users\jake\documents\visual studio 2015\Projects\Biology-Department-Equipment-Revision\Biology-Department-Equipment-Revision\obj\Debug\Biology-Department-Equipment-Revision.csproj.ResolveComReference.cache
