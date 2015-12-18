@@ -37,10 +37,11 @@
             this.groups = new System.Windows.Forms.ComboBox();
             this.period = new System.Windows.Forms.ComboBox();
             this.equipment = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.hazcards = new System.Windows.Forms.TextBox();
             this.submit = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.riskAssessment = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +92,8 @@
             // time
             // 
             this.time.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.time.CustomFormat = "HH:mm";
+            this.time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.time.Location = new System.Drawing.Point(303, 62);
             this.time.Name = "time";
             this.time.ShowUpDown = true;
@@ -161,6 +163,26 @@
             this.equipment.TabIndex = 7;
             this.equipment.Text = "Enter Equipment here....";
             // 
+            // hazcards
+            // 
+            this.hazcards.Location = new System.Drawing.Point(27, 268);
+            this.hazcards.Name = "hazcards";
+            this.hazcards.Size = new System.Drawing.Size(159, 20);
+            this.hazcards.TabIndex = 10;
+            this.hazcards.Text = "Enter Hazcards here....";
+            // 
+            // submit
+            // 
+            this.submit.BackColor = System.Drawing.Color.PaleGreen;
+            this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit.Location = new System.Drawing.Point(447, 259);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(121, 36);
+            this.submit.TabIndex = 11;
+            this.submit.Text = "Submit";
+            this.submit.UseVisualStyleBackColor = false;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Biology_Department_Equipment_Revision.Properties.Resources.tree;
@@ -179,32 +201,24 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // hazcards
+            // riskAssessment
             // 
-            this.hazcards.Location = new System.Drawing.Point(27, 268);
-            this.hazcards.Name = "hazcards";
-            this.hazcards.Size = new System.Drawing.Size(388, 20);
-            this.hazcards.TabIndex = 10;
-            this.hazcards.Text = "Enter Hazcards here....";
-            // 
-            // submit
-            // 
-            this.submit.BackColor = System.Drawing.Color.PaleGreen;
-            this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit.Location = new System.Drawing.Point(447, 259);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(121, 36);
-            this.submit.TabIndex = 11;
-            this.submit.Text = "Submit";
-            this.submit.UseVisualStyleBackColor = false;
-            this.submit.Click += new System.EventHandler(this.submit_Click);
+            this.riskAssessment.AutoSize = true;
+            this.riskAssessment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riskAssessment.Location = new System.Drawing.Point(198, 268);
+            this.riskAssessment.Name = "riskAssessment";
+            this.riskAssessment.Size = new System.Drawing.Size(243, 20);
+            this.riskAssessment.TabIndex = 13;
+            this.riskAssessment.Text = "I have carried out a risk assessment.";
+            this.riskAssessment.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(600, 306);
+            this.ClientSize = new System.Drawing.Size(600, 300);
+            this.Controls.Add(this.riskAssessment);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.hazcards);
             this.Controls.Add(this.pictureBox2);
@@ -221,7 +235,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Biology Department Equipment Revision";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -243,6 +256,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox hazcards;
         private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.CheckBox riskAssessment;
     }
 }
 
