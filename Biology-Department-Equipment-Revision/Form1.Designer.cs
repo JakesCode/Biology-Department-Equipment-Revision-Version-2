@@ -1,6 +1,6 @@
-﻿namespace Biology_Department_Equipment_Revision
+﻿namespace BDER
 {
-    partial class Form1
+    partial class appWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(appWindow));
             this.label1 = new System.Windows.Forms.Label();
             this.teacher = new System.Windows.Forms.ComboBox();
             this.calendar = new System.Windows.Forms.DateTimePicker();
@@ -38,184 +38,165 @@
             this.equipment = new System.Windows.Forms.TextBox();
             this.hazcards = new System.Windows.Forms.TextBox();
             this.submit = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.riskAssessment = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.save = new System.Windows.Forms.Button();
+            this.load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(594, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Biology Department Equipment Requisition";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // teacher
             // 
             this.teacher.FormattingEnabled = true;
             this.teacher.Items.AddRange(new object[] {
-            "Dr. Gilbert [ALG]",
-            "Dr. Pett [MRP]",
-            "Mr. Smith [MS]",
-            "Mrs. Allison [CGA]",
-            "Mrs. Baxter [AMB]",
-            "Mrs. Brown [LVB]",
-            "Mrs. Jagger [CHJ]",
-            "Mrs. Walker [BAW]",
-            "Mrs. Yuasa [AY]"});
-            this.teacher.Location = new System.Drawing.Point(27, 62);
+            resources.GetString("teacher.Items"),
+            resources.GetString("teacher.Items1"),
+            resources.GetString("teacher.Items2"),
+            resources.GetString("teacher.Items3"),
+            resources.GetString("teacher.Items4"),
+            resources.GetString("teacher.Items5"),
+            resources.GetString("teacher.Items6"),
+            resources.GetString("teacher.Items7"),
+            resources.GetString("teacher.Items8")});
+            resources.ApplyResources(this.teacher, "teacher");
             this.teacher.Name = "teacher";
-            this.teacher.Size = new System.Drawing.Size(121, 21);
-            this.teacher.TabIndex = 1;
-            this.teacher.Text = "Select a Teacher.";
             this.teacher.SelectedIndexChanged += new System.EventHandler(this.teacher_SelectedIndexChanged);
             // 
             // calendar
             // 
-            this.calendar.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendar.CustomFormat = "dd/MM";
+            resources.ApplyResources(this.calendar, "calendar");
             this.calendar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.calendar.Location = new System.Drawing.Point(188, 62);
             this.calendar.Name = "calendar";
-            this.calendar.Size = new System.Drawing.Size(227, 20);
-            this.calendar.TabIndex = 2;
             this.calendar.Value = new System.DateTime(2015, 12, 18, 0, 0, 0, 0);
+            this.calendar.ValueChanged += new System.EventHandler(this.calendar_ValueChanged);
             // 
             // yearGroup
             // 
             this.yearGroup.FormattingEnabled = true;
             this.yearGroup.Items.AddRange(new object[] {
-            "Year 7",
-            "Year 8",
-            "Year 9",
-            "Year 10",
-            "Year 11",
-            "Year 12",
-            "Year 13"});
-            this.yearGroup.Location = new System.Drawing.Point(447, 62);
+            resources.GetString("yearGroup.Items"),
+            resources.GetString("yearGroup.Items1"),
+            resources.GetString("yearGroup.Items2"),
+            resources.GetString("yearGroup.Items3"),
+            resources.GetString("yearGroup.Items4"),
+            resources.GetString("yearGroup.Items5"),
+            resources.GetString("yearGroup.Items6")});
+            resources.ApplyResources(this.yearGroup, "yearGroup");
             this.yearGroup.Name = "yearGroup";
-            this.yearGroup.Size = new System.Drawing.Size(121, 21);
-            this.yearGroup.TabIndex = 4;
-            this.yearGroup.Text = "Select a Year Group.";
             // 
             // groups
             // 
             this.groups.FormattingEnabled = true;
             this.groups.Items.AddRange(new object[] {
-            "1 Group",
-            "2 Groups",
-            "3 Groups",
-            "4 Groups",
-            "5 Groups",
-            "6 Groups",
-            "7 Groups",
-            "8 Groups"});
-            this.groups.Location = new System.Drawing.Point(27, 100);
+            resources.GetString("groups.Items"),
+            resources.GetString("groups.Items1"),
+            resources.GetString("groups.Items2"),
+            resources.GetString("groups.Items3"),
+            resources.GetString("groups.Items4"),
+            resources.GetString("groups.Items5"),
+            resources.GetString("groups.Items6"),
+            resources.GetString("groups.Items7")});
+            resources.ApplyResources(this.groups, "groups");
             this.groups.Name = "groups";
-            this.groups.Size = new System.Drawing.Size(121, 21);
-            this.groups.TabIndex = 5;
-            this.groups.Text = "How many groups?";
             this.groups.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // period
             // 
             this.period.FormattingEnabled = true;
             this.period.Items.AddRange(new object[] {
-            "Period 1",
-            "Period 2",
-            "Period 3",
-            "Period 4",
-            "Period 5",
-            "Period 6"});
-            this.period.Location = new System.Drawing.Point(447, 100);
+            resources.GetString("period.Items"),
+            resources.GetString("period.Items1"),
+            resources.GetString("period.Items2"),
+            resources.GetString("period.Items3"),
+            resources.GetString("period.Items4"),
+            resources.GetString("period.Items5")});
+            resources.ApplyResources(this.period, "period");
             this.period.Name = "period";
-            this.period.Size = new System.Drawing.Size(121, 21);
-            this.period.TabIndex = 6;
-            this.period.Text = "Select a Period.";
             this.period.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // equipment
             // 
-            this.equipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipment.Location = new System.Drawing.Point(188, 127);
-            this.equipment.Multiline = true;
+            resources.ApplyResources(this.equipment, "equipment");
             this.equipment.Name = "equipment";
-            this.equipment.Size = new System.Drawing.Size(227, 126);
-            this.equipment.TabIndex = 7;
             // 
             // hazcards
             // 
-            this.hazcards.Location = new System.Drawing.Point(27, 268);
+            resources.ApplyResources(this.hazcards, "hazcards");
             this.hazcards.Name = "hazcards";
-            this.hazcards.Size = new System.Drawing.Size(159, 20);
-            this.hazcards.TabIndex = 10;
-            this.hazcards.Text = "Enter Hazcards here....";
             // 
             // submit
             // 
             this.submit.BackColor = System.Drawing.Color.PaleGreen;
-            this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit.Location = new System.Drawing.Point(447, 259);
+            resources.ApplyResources(this.submit, "submit");
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(121, 36);
-            this.submit.TabIndex = 11;
-            this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = false;
             this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Biology_Department_Equipment_Revision.Properties.Resources.tree;
-            this.pictureBox2.Location = new System.Drawing.Point(447, 127);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(121, 126);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Biology_Department_Equipment_Revision.Properties.Resources.microscope_inBox;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 127);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 126);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // riskAssessment
             // 
-            this.riskAssessment.AutoSize = true;
-            this.riskAssessment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.riskAssessment.Location = new System.Drawing.Point(198, 268);
+            resources.ApplyResources(this.riskAssessment, "riskAssessment");
             this.riskAssessment.Name = "riskAssessment";
-            this.riskAssessment.Size = new System.Drawing.Size(243, 20);
-            this.riskAssessment.TabIndex = 13;
-            this.riskAssessment.Text = "I have carried out a risk assessment.";
             this.riskAssessment.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(216, 100);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Equipment Needed....";
             // 
-            // Form1
+            // label3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BDER.Properties.Resources.tree;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BDER.Properties.Resources.microscope_inBox;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // save
+            // 
+            this.save.BackColor = System.Drawing.Color.PaleGreen;
+            resources.ApplyResources(this.save, "save");
+            this.save.Name = "save";
+            this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // load
+            // 
+            this.load.BackColor = System.Drawing.Color.PaleGreen;
+            resources.ApplyResources(this.load, "load");
+            this.load.Name = "load";
+            this.load.UseVisualStyleBackColor = false;
+            // 
+            // appWindow
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(600, 300);
+            this.Controls.Add(this.load);
+            this.Controls.Add(this.save);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.riskAssessment);
             this.Controls.Add(this.submit);
@@ -230,9 +211,9 @@
             this.Controls.Add(this.teacher);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Biology Department Equipment Requisition";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "appWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -255,6 +236,9 @@
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.CheckBox riskAssessment;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Button load;
     }
 }
 

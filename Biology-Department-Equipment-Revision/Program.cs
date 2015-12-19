@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Biology_Department_Equipment_Revision
+namespace BDER
 {
     static class Program
     {
@@ -16,7 +13,7 @@ namespace Biology_Department_Equipment_Revision
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new appWindow());
         }
     }
 }

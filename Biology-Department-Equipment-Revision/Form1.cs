@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Outlook = Microsoft.Office.Interop.Outlook;
-using DDay.iCal;
 
-namespace Biology_Department_Equipment_Revision
+namespace BDER
 {
-    public partial class Form1 : Form
+    public partial class appWindow : Form
     {
-        public Form1()
+        public appWindow()
         {
             InitializeComponent();
         }
@@ -50,14 +42,14 @@ namespace Biology_Department_Equipment_Revision
             Object selectedHazcards = hazcards.Text;
             Boolean selectedRiskAssessment = riskAssessment.Checked;
             /* (selectedTeacher.ToString() != null && selectedYearGroup.ToString() != null && selectedGroup.ToString() != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != "Enter Equipment here...." && selectedHazcards.ToString() != "Enter Hazcards here...." && selectedRiskAssessment) */
-            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != "Enter Hazcards here...." && selectedRiskAssessment)
+            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != null && selectedRiskAssessment)
             {
                 /* With thanks to http://stackoverflow.com/questions/19911230/sending-email-through-outlook-2010-via-c-sharp */
                 Microsoft.Office.Interop.Outlook.Application app = new Microsoft.Office.Interop.Outlook.Application();
                 Microsoft.Office.Interop.Outlook.MailItem mailItem = app.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
                 mailItem.Subject = "Practical Request from " + selectedTeacher.ToString() + " on " + selectedDate;
                 mailItem.To = "technicians@gsal.org.uk";
-                mailItem.HTMLBody = (@selectedTeacher + " has requested the following equipment on " + selectedDate + " during " + selectedPeriod + ":<br><h1 style='color:blue'> " + selectedEquipment + "</h1>");
+                mailItem.HTMLBody = (@selectedTeacher + " has requested the following equipment on " + selectedDate + " during " + selectedPeriod + ":<br><h1 style='color:blue'> " + selectedEquipment + "</h1><br><br><h3>Sent with QuickPractical a.k.a Biology Department Equipment Requisition</h3>");
                 mailItem.Importance = Outlook.OlImportance.olImportanceHigh;
 
                 string theTime = "";
@@ -128,6 +120,21 @@ Make sure you have confirmed a risk assessment has been carried out.", "Warning"
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calendar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
