@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GJcMxyfooFlRWXK0WfN67Sljoo+5tMkGTS8EzgJLCzM=</dsig:DigestValue>
+        <dsig:DigestValue>Z5Q3p8WSp7GIML5pndmPZrp7qrCYO8xcTDTnjmTmqcQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Y4wZ8ypamUHuz86WZb9dJu0b14GjwFi2/xjFGagGwws=</dsig:DigestValue>
+        <dsig:DigestValue>FIeVBUV5iV+JdVMKYeQARJSIhF7/dCooNqxekVujlhQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,13 +102,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BDER.exe.config" size="184">
+  <file name="BDER.exe.config" size="189">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jWVCngsqgsEdPtxOoE7SAK7f6h1++LmE6IqOl8/1R3A=</dsig:DigestValue>
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="microscope.ico" size="127308">

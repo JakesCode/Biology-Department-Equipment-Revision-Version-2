@@ -390,10 +390,10 @@
     <value>9</value>
   </data>
   <data name="hazcards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 278</value>
+    <value>27, 297</value>
   </data>
   <data name="hazcards.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 20</value>
+    <value>149, 20</value>
   </data>
   <data name="hazcards.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -414,10 +414,10 @@
     <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 268</value>
+    <value>447, 279</value>
   </data>
   <data name="submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 36</value>
+    <value>121, 48</value>
   </data>
   <data name="submit.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -444,7 +444,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="riskAssessment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 278</value>
+    <value>182, 274</value>
   </data>
   <data name="riskAssessment.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 20</value>
@@ -504,7 +504,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 259</value>
+    <value>34, 275</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 16</value>
@@ -573,7 +573,7 @@
     <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 304</value>
+    <value>192, 297</value>
   </data>
   <data name="save.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 30</value>
@@ -604,7 +604,7 @@
     <value>NoControl</value>
   </data>
   <data name="load.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 304</value>
+    <value>312, 297</value>
   </data>
   <data name="load.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 30</value>
