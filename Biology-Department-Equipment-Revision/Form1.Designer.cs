@@ -45,6 +45,7 @@
             this.save = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.versionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -190,11 +191,19 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // versionLabel
+            // 
+            resources.ApplyResources(this.versionLabel, "versionLabel");
+            this.versionLabel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Click += new System.EventHandler(this.versionLabel_Click);
+            // 
             // appWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
+            this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.save);
             this.Controls.Add(this.load);
             this.Controls.Add(this.label3);
@@ -240,6 +249,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button load;
         private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Label versionLabel;
     }
 }
 

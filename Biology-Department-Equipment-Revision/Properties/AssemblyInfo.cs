@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Biology-Department-Equipment-Revision")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Biology-Department-Equipment-Requisition")]
+[assembly: AssemblyDescription("A program to aid the GSAL Biology Department Staff in organising practicals.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Biology-Department-Equipment-Revision")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("JakesCode")]
+[assembly: AssemblyProduct("Biology-Department-Equipment-Requisition (BDER)")]
+[assembly: AssemblyCopyright("Copyright © JakesCode 2015")]
+[assembly: AssemblyTrademark("JakesCode")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("2.0.4.3")]
+[assembly: AssemblyFileVersion("2.0.4.3")]

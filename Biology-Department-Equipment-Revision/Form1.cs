@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Reflection;
 using System.Collections.Generic;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using static BDER.Form2;
@@ -12,6 +13,8 @@ namespace BDER
         public appWindow()
         {
             InitializeComponent();
+            string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            versionLabel.Text = String.Format("Version {0}", version);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -235,6 +238,10 @@ Make sure you have confirmed a risk assessment has been carried out.", "Warning"
 
             Form3 loadWindow = new Form3();
             loadWindow.Show();
+        }
+
+        private void versionLabel_Click(object sender, EventArgs e)
+        {
         }
     }
 }

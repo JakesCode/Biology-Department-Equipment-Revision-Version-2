@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="BDER.exe" version="2.0.3.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="BDER.exe" version="2.0.4.3" publicKeyToken="0000000000000000" language="en-GB" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="microscope.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="BDER" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="BDER" version="2.0.4.3" language="neutral" processorArchitecture="msil" />
     <commandLine file="BDER.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,38 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDER.exe" size="751616">
-      <assemblyIdentity name="BDER" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDER.exe" size="753664">
+      <assemblyIdentity name="BDER" version="2.0.4.3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LXpAXWdks75a4t7jJKHHUyqgN4V9w+E2BwPs8HnzF90=</dsig:DigestValue>
+        <dsig:DigestValue>P87QGnkmCtn8m8dRMsh6Dg3aIqsHbhoUyyUeOPJ1JBE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-GB\BDER.resources.dll" size="133120">
-      <assemblyIdentity name="BDER.resources" version="1.0.0.0" language="en-GB" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-GB\BDER.resources.dll" size="134144">
+      <assemblyIdentity name="BDER.resources" version="2.0.4.3" language="en-GB" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bNgf2R6/N+WPY7VVGPixb3heilmtZBR6yfQ6cAp1+LU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sq\BDER.resources.dll" size="131584">
-      <assemblyIdentity name="BDER.resources" version="1.0.0.0" language="sq" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZRWrCFrwAw6f8qUEhHEvdgE+5zO3Cpp7fs0UNuA1cqE=</dsig:DigestValue>
+        <dsig:DigestValue>Te0Kw4s5nZAk3H1y91XX02ElAWw5Rxpb/9PzlCffM4o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

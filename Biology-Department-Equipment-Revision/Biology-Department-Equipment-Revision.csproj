@@ -27,10 +27,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>https://github.com/JakesCode/Biology-Department-Equipment-Revision-Version-2/issues</SupportUrl>
+    <ErrorReportUrl>https://github.com/JakesCode/Biology-Department-Equipment-Revision-Version-2/issues</ErrorReportUrl>
+    <TargetCulture>en-GB</TargetCulture>
+    <ProductName>Biology-Department-Equipment-Requisition</ProductName>
+    <PublisherName>JakesCode</PublisherName>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.0.3.%2a</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>2.0.4.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -68,6 +73,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>microscope.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BDER.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
