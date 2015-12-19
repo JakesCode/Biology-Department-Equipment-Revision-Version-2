@@ -7,7 +7,7 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="BDER.exe.manifest" size="4570">
+    <dependentAssembly dependencyType="install" codebase="Application Files\BDER_2_0_4_3\BDER.exe.manifest" size="4570">
       <assemblyIdentity name="BDER.exe" version="2.0.4.3" publicKeyToken="0000000000000000" language="en-GB" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
