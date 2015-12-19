@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="BDER.exe" version="2.0.2.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="BDER.exe" version="2.0.3.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="microscope.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -43,26 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="antlr.runtime.dll" size="106496">
-      <assemblyIdentity name="antlr.runtime" version="2.7.6.2" publicKeyToken="1790BA318EBC5D56" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JKGsRLuSuOFN+FnJE3jXYJHK4XTnKiMPOiE0Xc6u7Ac=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDER.exe" size="617984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDER.exe" size="751616">
       <assemblyIdentity name="BDER" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4sSpjfaA0+Nq6/hIcXcTZGm42tgs3/vKd58zgOMNlSE=</dsig:DigestValue>
+        <dsig:DigestValue>LXpAXWdks75a4t7jJKHHUyqgN4V9w+E2BwPs8HnzF90=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,31 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LFdApBxmuvvsnpmLuEAAkJlBDZix3DEOYaPf/pgc3+c=</dsig:DigestValue>
+        <dsig:DigestValue>bNgf2R6/N+WPY7VVGPixb3heilmtZBR6yfQ6cAp1+LU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DDay.Collections.dll" size="24576">
-      <assemblyIdentity name="DDay.Collections" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sq\BDER.resources.dll" size="131584">
+      <assemblyIdentity name="BDER.resources" version="1.0.0.0" language="sq" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GVMeH4JLnjmlIJO3XcSJijRpZPJK7C76lUHjruVaQMA=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DDay.iCal.dll" size="181760">
-      <assemblyIdentity name="DDay.iCal" version="1.0.2.575" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nLhsUg9K+x8+BbapSf/+y1ZGahpshEMXF5lcwFRjYss=</dsig:DigestValue>
+        <dsig:DigestValue>ZRWrCFrwAw6f8qUEhHEvdgE+5zO3Cpp7fs0UNuA1cqE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

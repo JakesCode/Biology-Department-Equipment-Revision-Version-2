@@ -21,28 +21,23 @@ namespace BDER
 
         }
 
+        public static class ControlID
+        {
+            public static string TextData { get; set; }
+            public static string TextTags { get; set; }
+        }
+
         private void submit2_Click(object sender, EventArgs e)
         {
-            string requestName = name.Text;
-            string requestTags = tags.Text;
-
-            /* Make the tags into something usable */
-            Array sortedTags = requestTags.Split(new string[] { ",", " " }, StringSplitOptions.RemoveEmptyEntries);
-            string path = @"history.txt";
-            using (StreamWriter sw = File.AppendText(path))
+            if (name.Text.Contains(" "))
             {
-                sw.WriteLine("BEGINNAME\n");
-                sw.WriteLine(requestName);
-                sw.WriteLine("ENDNAME\n");
-                sw.WriteLine("BEGINTAGS\n");
-                foreach (string line in sortedTags)
-                {
-                    sw.WriteLine(line);
-                }
-                sw.WriteLine("ENDTAGS\n");
+                MessageBox.Show("There are spaces in the request's name. Please remove them and try again.");
+            } else
+            {
+                ControlID.TextData = name.Text;
+                ControlID.TextTags = tags.Text;
+                this.Dispose();
             }
-
-            MessageBox.Show("Saved the request.");
         }
 
         private void delete_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,6 +49,11 @@ namespace BDER
                 string path = @"history.txt";
                 System.IO.File.WriteAllText(path, string.Empty);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

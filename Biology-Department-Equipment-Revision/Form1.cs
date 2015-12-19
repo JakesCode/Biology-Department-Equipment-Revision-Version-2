@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.IO;
+using System.Collections.Generic;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using static BDER.Form2;
 
 namespace BDER
 {
@@ -147,12 +150,91 @@ Make sure you have confirmed a risk assessment has been carried out.", "Warning"
 
             if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != null && selectedRiskAssessment)
             {
-                Form2 saveWindow = new Form2();
-                saveWindow.Show();
+                bool leave = false;
+
+                while (leave != true)
+                {
+                    Form2 saveWindow = new Form2();
+                    saveWindow.ShowDialog();
+                    string requestName = ControlID.TextData;
+
+                    MessageBox.Show("Saved the request.");
+
+                    using (StreamWriter sw = File.AppendText(@"history.txt"))
+                    {
+                        sw.WriteLine("BEGINREQUEST");
+                        sw.WriteLine("BEGINNAME");
+                        sw.WriteLine(requestName);
+                        sw.WriteLine("ENDNAME");
+                        sw.WriteLine("BEGINTAGS");
+                        sw.WriteLine("ENDTAGS");
+                        sw.WriteLine("BEGINDATA");
+                        sw.WriteLine(selectedTeacher);
+                        sw.WriteLine(selectedDate);
+                        sw.WriteLine(selectedYearGroup);
+                        sw.WriteLine(selectedGroup);
+                        sw.WriteLine(selectedPeriod);
+                        sw.WriteLine(selectedEquipment);
+                        sw.WriteLine(selectedHazcards);
+                        sw.WriteLine(selectedRiskAssessment);
+                        sw.WriteLine("ENDDATA");
+                        sw.WriteLine("ENDREQUEST");
+                    }
+
+                    string path = @"historyPart.txt";
+                    System.IO.File.WriteAllText(path, string.Empty);
+                    leave = true;
+                }
+
             } else
             {
                 MessageBox.Show("Before you can save, you must complete the form.", "Cannot continue");
             }
+        }
+
+        private void load_Click(object sender, EventArgs e)
+        {
+            /* Read the file in, line by line */
+            string[] lines = System.IO.File.ReadAllLines(@"history.txt");
+            var tagList = new List<string>();
+            int counter = 0;
+            string experimentName = "";
+
+            while (counter < lines.Length)
+            {
+                /* Look for "BEGINNAME" */
+                if (lines[counter] == "BEGINNAME")
+                {
+                    experimentName = lines[counter + 1];
+                }
+
+                    /* Look for "BEGINTAGS" */
+                    if (lines[counter] == "BEGINTAGS")
+                {
+                    while (lines[counter] != "ENDTAGS")
+                    {
+                        counter += 1;
+                        tagList.Add(lines[counter]);
+                    }
+
+                    /* Remove the "ENDTAGS" that appears on the end of the list */
+                    tagList.RemoveAt((tagList.Count - 1));
+                }
+
+                if (lines[counter] == "BEGINDATA")
+                {
+                    MessageBox.Show("This");
+                }
+
+                /* Prevent IndexOutOfRange Error */
+                if (counter < lines.Length)
+                {
+                    counter += 1;
+                }
+            }
+
+            Form3 loadWindow = new Form3();
+            loadWindow.Show();
         }
     }
 }

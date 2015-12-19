@@ -53,7 +53,6 @@
             // 
             // name
             // 
-            this.name.AcceptsReturn = true;
             this.name.Location = new System.Drawing.Point(13, 33);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(224, 20);
@@ -66,9 +65,10 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(40, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 18);
+            this.label2.Size = new System.Drawing.Size(164, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "(e.g. \"potato osmosis\")";
+            this.label2.Text = "(e.g. \"potato_osmosis\")";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -83,7 +83,6 @@
             // 
             // tags
             // 
-            this.tags.AcceptsReturn = true;
             this.tags.Location = new System.Drawing.Point(12, 140);
             this.tags.Name = "tags";
             this.tags.Size = new System.Drawing.Size(224, 20);
@@ -113,7 +112,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 211);
+            this.label6.Location = new System.Drawing.Point(8, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(230, 40);
             this.label6.TabIndex = 7;

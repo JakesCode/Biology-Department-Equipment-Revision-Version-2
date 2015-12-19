@@ -123,23 +123,19 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Sans, 20.25pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 9</value>
+    <value>12, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>594, 32</value>
+    <value>145, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Biology Department Equipment Requisition</value>
+    <value>Search for a tag....</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -151,511 +147,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="teacher.Items" xml:space="preserve">
-    <value>Dr. Gilbert [ALG]</value>
-  </data>
-  <data name="teacher.Items1" xml:space="preserve">
-    <value>Dr. Pett [MRP]</value>
-  </data>
-  <data name="teacher.Items2" xml:space="preserve">
-    <value>Mr. Smith [MS]</value>
-  </data>
-  <data name="teacher.Items3" xml:space="preserve">
-    <value>Mrs. Allison [CGA]</value>
-  </data>
-  <data name="teacher.Items4" xml:space="preserve">
-    <value>Mrs. Baxter [AMB]</value>
-  </data>
-  <data name="teacher.Items5" xml:space="preserve">
-    <value>Mrs. Brown [LVB]</value>
-  </data>
-  <data name="teacher.Items6" xml:space="preserve">
-    <value>Mrs. Jagger [CHJ]</value>
-  </data>
-  <data name="teacher.Items7" xml:space="preserve">
-    <value>Mrs. Walker [BAW]</value>
-  </data>
-  <data name="teacher.Items8" xml:space="preserve">
-    <value>Mrs. Yuasa [AY]</value>
-  </data>
-  <data name="teacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 62</value>
-  </data>
-  <data name="teacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="teacher.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="teacher.Text" xml:space="preserve">
-    <value>Select a Teacher.</value>
-  </data>
-  <data name="&gt;&gt;teacher.Name" xml:space="preserve">
-    <value>teacher</value>
-  </data>
-  <data name="&gt;&gt;teacher.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;teacher.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;teacher.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="calendar.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15pt</value>
-  </data>
-  <data name="calendar.CustomFormat" xml:space="preserve">
-    <value>dd/MM</value>
-  </data>
-  <data name="calendar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 62</value>
-  </data>
-  <data name="calendar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 20</value>
-  </data>
-  <data name="calendar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;calendar.Name" xml:space="preserve">
-    <value>calendar</value>
+  <data name="tagSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 32</value>
   </data>
-  <data name="&gt;&gt;calendar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tagSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
   </data>
-  <data name="&gt;&gt;calendar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="tagSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;calendar.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;tagSearch.Name" xml:space="preserve">
+    <value>tagSearch</value>
   </data>
-  <data name="yearGroup.Items" xml:space="preserve">
-    <value>Year 7</value>
-  </data>
-  <data name="yearGroup.Items1" xml:space="preserve">
-    <value>Year 8</value>
-  </data>
-  <data name="yearGroup.Items2" xml:space="preserve">
-    <value>Year 9</value>
-  </data>
-  <data name="yearGroup.Items3" xml:space="preserve">
-    <value>Year 10</value>
-  </data>
-  <data name="yearGroup.Items4" xml:space="preserve">
-    <value>Year 11</value>
-  </data>
-  <data name="yearGroup.Items5" xml:space="preserve">
-    <value>Year 12</value>
-  </data>
-  <data name="yearGroup.Items6" xml:space="preserve">
-    <value>Year 13</value>
-  </data>
-  <data name="yearGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 62</value>
-  </data>
-  <data name="yearGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="yearGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="yearGroup.Text" xml:space="preserve">
-    <value>Select a Year Group.</value>
-  </data>
-  <data name="&gt;&gt;yearGroup.Name" xml:space="preserve">
-    <value>yearGroup</value>
-  </data>
-  <data name="&gt;&gt;yearGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yearGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;yearGroup.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="groups.Items" xml:space="preserve">
-    <value>1 Group</value>
-  </data>
-  <data name="groups.Items1" xml:space="preserve">
-    <value>2 Groups</value>
-  </data>
-  <data name="groups.Items2" xml:space="preserve">
-    <value>3 Groups</value>
-  </data>
-  <data name="groups.Items3" xml:space="preserve">
-    <value>4 Groups</value>
-  </data>
-  <data name="groups.Items4" xml:space="preserve">
-    <value>5 Groups</value>
-  </data>
-  <data name="groups.Items5" xml:space="preserve">
-    <value>6 Groups</value>
-  </data>
-  <data name="groups.Items6" xml:space="preserve">
-    <value>7 Groups</value>
-  </data>
-  <data name="groups.Items7" xml:space="preserve">
-    <value>8 Groups</value>
-  </data>
-  <data name="groups.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 100</value>
-  </data>
-  <data name="groups.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="groups.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="groups.Text" xml:space="preserve">
-    <value>How many groups?</value>
-  </data>
-  <data name="&gt;&gt;groups.Name" xml:space="preserve">
-    <value>groups</value>
-  </data>
-  <data name="&gt;&gt;groups.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groups.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groups.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="period.Items" xml:space="preserve">
-    <value>Period 1</value>
-  </data>
-  <data name="period.Items1" xml:space="preserve">
-    <value>Period 2</value>
-  </data>
-  <data name="period.Items2" xml:space="preserve">
-    <value>Period 3</value>
-  </data>
-  <data name="period.Items3" xml:space="preserve">
-    <value>Period 4</value>
-  </data>
-  <data name="period.Items4" xml:space="preserve">
-    <value>Period 5</value>
-  </data>
-  <data name="period.Items5" xml:space="preserve">
-    <value>Period 6</value>
-  </data>
-  <data name="period.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 100</value>
-  </data>
-  <data name="period.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="period.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="period.Text" xml:space="preserve">
-    <value>Select a Period.</value>
-  </data>
-  <data name="&gt;&gt;period.Name" xml:space="preserve">
-    <value>period</value>
-  </data>
-  <data name="&gt;&gt;period.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;period.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;period.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="equipment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="equipment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 127</value>
-  </data>
-  <data name="equipment.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="equipment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 126</value>
-  </data>
-  <data name="equipment.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;equipment.Name" xml:space="preserve">
-    <value>equipment</value>
-  </data>
-  <data name="&gt;&gt;equipment.Type" xml:space="preserve">
+  <data name="&gt;&gt;tagSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;equipment.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tagSearch.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;equipment.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;tagSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="hazcards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 286</value>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
-  <data name="hazcards.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 20</value>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 58</value>
   </data>
-  <data name="hazcards.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 29</value>
   </data>
-  <data name="&gt;&gt;hazcards.Name" xml:space="preserve">
-    <value>hazcards</value>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;hazcards.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hazcards.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;hazcards.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="submit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12.75pt</value>
-  </data>
-  <data name="submit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 259</value>
-  </data>
-  <data name="submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 48</value>
-  </data>
-  <data name="submit.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="submit.Text" xml:space="preserve">
+  <data name="button1.Text" xml:space="preserve">
     <value>Submit</value>
   </data>
-  <data name="&gt;&gt;submit.Name" xml:space="preserve">
-    <value>submit</value>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
   </data>
-  <data name="&gt;&gt;submit.Type" xml:space="preserve">
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;submit.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;submit.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="riskAssessment.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="riskAssessment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="riskAssessment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="riskAssessment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 286</value>
-  </data>
-  <data name="riskAssessment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 20</value>
-  </data>
-  <data name="riskAssessment.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="riskAssessment.Text" xml:space="preserve">
-    <value>I have carried out a risk assessment.</value>
-  </data>
-  <data name="&gt;&gt;riskAssessment.Name" xml:space="preserve">
-    <value>riskAssessment</value>
-  </data>
-  <data name="&gt;&gt;riskAssessment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;riskAssessment.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;riskAssessment.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12.75pt</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 100</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Equipment Needed....</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 270</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 16</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Enter Hazcards here....</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="load.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="load.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="load.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 256</value>
-  </data>
-  <data name="load.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 30</value>
-  </data>
-  <data name="load.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="load.Text" xml:space="preserve">
-    <value>Load</value>
-  </data>
-  <data name="load.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;load.Name" xml:space="preserve">
-    <value>load</value>
-  </data>
-  <data name="&gt;&gt;load.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;load.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;load.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="save.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="save.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 256</value>
-  </data>
-  <data name="save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 30</value>
-  </data>
-  <data name="save.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="save.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="save.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;save.Name" xml:space="preserve">
-    <value>save</value>
-  </data>
-  <data name="&gt;&gt;save.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;save.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;save.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 127</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 126</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 127</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 126</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -664,7 +204,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 320</value>
+    <value>169, 305</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2793,10 +2333,10 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Biology Department Equipment Requisition</value>
+    <value>Load</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>appWindow</value>
+    <value>Form3</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

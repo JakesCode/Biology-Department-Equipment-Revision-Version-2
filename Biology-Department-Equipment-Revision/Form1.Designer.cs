@@ -41,10 +41,10 @@
             this.riskAssessment = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.load = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,6 +160,22 @@
             this.label3.Name = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // load
+            // 
+            this.load.BackColor = System.Drawing.Color.PaleGreen;
+            resources.ApplyResources(this.load, "load");
+            this.load.Name = "load";
+            this.load.UseVisualStyleBackColor = false;
+            this.load.Click += new System.EventHandler(this.load_Click);
+            // 
+            // save
+            // 
+            this.save.BackColor = System.Drawing.Color.PaleGreen;
+            resources.ApplyResources(this.save, "save");
+            this.save.Name = "save";
+            this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.save_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BDER.Properties.Resources.tree;
@@ -173,21 +189,6 @@
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
-            // 
-            // load
-            // 
-            this.load.BackColor = System.Drawing.Color.PaleGreen;
-            resources.ApplyResources(this.load, "load");
-            this.load.Name = "load";
-            this.load.UseVisualStyleBackColor = false;
-            // 
-            // save
-            // 
-            this.save.BackColor = System.Drawing.Color.PaleGreen;
-            resources.ApplyResources(this.save, "save");
-            this.save.Name = "save";
-            this.save.UseVisualStyleBackColor = false;
-            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // appWindow
             // 
