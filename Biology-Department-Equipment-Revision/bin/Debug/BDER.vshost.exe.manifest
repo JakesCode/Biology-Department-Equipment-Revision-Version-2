@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDER.exe" size="482816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDER.exe" size="617984">
       <assemblyIdentity name="BDER" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Z5Q3p8WSp7GIML5pndmPZrp7qrCYO8xcTDTnjmTmqcQ=</dsig:DigestValue>
+        <dsig:DigestValue>4sSpjfaA0+Nq6/hIcXcTZGm42tgs3/vKd58zgOMNlSE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FIeVBUV5iV+JdVMKYeQARJSIhF7/dCooNqxekVujlhQ=</dsig:DigestValue>
+        <dsig:DigestValue>LFdApBxmuvvsnpmLuEAAkJlBDZix3DEOYaPf/pgc3+c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

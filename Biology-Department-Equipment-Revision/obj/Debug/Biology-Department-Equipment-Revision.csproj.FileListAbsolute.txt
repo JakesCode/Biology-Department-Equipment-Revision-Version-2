@@ -42,3 +42,4 @@ C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revis
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\en-GB\BDER.resources.dll
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.exe.manifest
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.application
+C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form2.resources

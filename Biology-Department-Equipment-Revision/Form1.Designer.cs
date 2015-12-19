@@ -43,8 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.save = new System.Windows.Forms.Button();
             this.load = new System.Windows.Forms.Button();
+            this.save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -174,14 +174,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // save
-            // 
-            this.save.BackColor = System.Drawing.Color.PaleGreen;
-            resources.ApplyResources(this.save, "save");
-            this.save.Name = "save";
-            this.save.UseVisualStyleBackColor = false;
-            this.save.Click += new System.EventHandler(this.button1_Click);
-            // 
             // load
             // 
             this.load.BackColor = System.Drawing.Color.PaleGreen;
@@ -189,13 +181,21 @@
             this.load.Name = "load";
             this.load.UseVisualStyleBackColor = false;
             // 
+            // save
+            // 
+            this.save.BackColor = System.Drawing.Color.PaleGreen;
+            resources.ApplyResources(this.save, "save");
+            this.save.Name = "save";
+            this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.save_Click);
+            // 
             // appWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.Controls.Add(this.load);
             this.Controls.Add(this.save);
+            this.Controls.Add(this.load);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.riskAssessment);
@@ -237,8 +237,8 @@
         private System.Windows.Forms.CheckBox riskAssessment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button load;
+        private System.Windows.Forms.Button save;
     }
 }
 

@@ -131,12 +131,28 @@ Make sure you have confirmed a risk assessment has been carried out.", "Warning"
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void save_Click(object sender, EventArgs e)
         {
+            Object selectedTeacher = teacher.SelectedItem;
+            String selectedDate = calendar.Value.ToString("dd/MM");
+            Object selectedYearGroup = yearGroup.SelectedItem;
+            Object selectedGroup = groups.SelectedItem;
+            Object selectedPeriod = period.SelectedItem;
+            Object selectedEquipment = equipment.Text;
+            Object selectedHazcards = hazcards.Text;
+            Boolean selectedRiskAssessment = riskAssessment.Checked;
 
+            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != null && selectedRiskAssessment)
+            {
+                Form2 saveWindow = new Form2();
+                saveWindow.Show();
+            } else
+            {
+                MessageBox.Show("Before you can save, you must complete the form.", "Cannot continue");
+            }
         }
     }
 }
