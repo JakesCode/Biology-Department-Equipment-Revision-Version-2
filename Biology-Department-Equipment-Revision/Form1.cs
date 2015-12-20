@@ -4,6 +4,10 @@ using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Calendar.v3;
+using Google.Apis.Calendar.v3.Data;
+using Google.Apis.Services;
 using static BDER.Form2;
 
 namespace BDER
