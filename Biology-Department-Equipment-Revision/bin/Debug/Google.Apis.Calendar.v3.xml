@@ -814,6 +814,15 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarService.BasePath">
             <summary>Gets the service base path.</summary>
         </member>
+        <member name="T:Google.Apis.Calendar.v3.CalendarService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Calendar API.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarService.Scope.Calendar">
+            <summary>Manage your calendars</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarService.Scope.CalendarReadonly">
+            <summary>View your calendars</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarService.Acl">
             <summary>Gets the Acl resource.</summary>
         </member>
@@ -838,27 +847,21 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarService.Settings">
             <summary>Gets the Settings resource.</summary>
         </member>
-        <member name="T:Google.Apis.Calendar.v3.CalendarService.Scope">
-            <summary>Available OAuth 2.0 scopes for use with the Calendar API.</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarService.Scope.Calendar">
-            <summary>Manage your calendars</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarService.Scope.CalendarReadonly">
-            <summary>View your calendars</summary>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1">
             <summary>A base abstract class for Calendar requests.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
             <summary>Constructs a new CalendarBaseServiceRequest instance.</summary>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.InitParameters">
-            <summary>Initializes Calendar parameter list.</summary>
-        </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.Alt">
             <summary>Data format for the response.</summary>
             [default: json]
+        </member>
+        <member name="T:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.Fields">
             <summary>Selector specifying which fields to include in a partial response.</summary>
@@ -882,11 +885,8 @@
             <summary>IP address of the site where the request originates. Use this if you want to enforce per-user
             limits.</summary>
         </member>
-        <member name="T:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.AltEnum">
-            <summary>Data format for the response.</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.AltEnum.Json">
-            <summary>Responses with Content-Type of application/json</summary>
+        <member name="M:Google.Apis.Calendar.v3.CalendarBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Calendar parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource">
             <summary>The "acl" collection of methods.</summary>
@@ -904,54 +904,11 @@
             
              <param name="ruleId">ACL rule identifier.</param>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.Get(System.String,System.String)">
-             <summary>Returns an access control rule.</summary>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="ruleId">ACL rule identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.Insert(Google.Apis.Calendar.v3.Data.AclRule,System.String)">
-            <summary>Creates an access control rule.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.List(System.String)">
-            <summary>Returns the rules in the access control list for the calendar.</summary>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.Patch(Google.Apis.Calendar.v3.Data.AclRule,System.String,System.String)">
-             <summary>Updates an access control rule. This method supports patch semantics.</summary>
-             <param name="body">The body of the request.</param>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="ruleId">ACL rule identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.Update(Google.Apis.Calendar.v3.Data.AclRule,System.String,System.String)">
-             <summary>Updates an access control rule.</summary>
-             <param name="body">The body of the request.</param>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="ruleId">ACL rule identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.Watch(Google.Apis.Calendar.v3.Data.Channel,System.String)">
-            <summary>Watch for changes to ACL resources.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.DeleteRequest">
             <summary>Deletes an access control rule.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
             <summary>Constructs a new Delete request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.DeleteRequest.InitParameters">
-            <summary>Initializes Delete parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.DeleteRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -969,14 +926,21 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.DeleteRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.Get(System.String,System.String)">
+             <summary>Returns an access control rule.</summary>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="ruleId">ACL rule identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.GetRequest">
             <summary>Returns an access control rule.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
             <summary>Constructs a new Get request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.GetRequest.InitParameters">
-            <summary>Initializes Get parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.GetRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -994,17 +958,20 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.GetRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.Insert(Google.Apis.Calendar.v3.Data.AclRule,System.String)">
+            <summary>Creates an access control rule.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.InsertRequest">
             <summary>Creates an access control rule.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.AclRule,System.String)">
             <summary>Constructs a new Insert request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.InsertRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.InsertRequest.InitParameters">
-            <summary>Initializes Insert parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.InsertRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1012,6 +979,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.InsertRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.InsertRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -1022,14 +992,19 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.InsertRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.List(System.String)">
+            <summary>Returns the rules in the access control list for the calendar.</summary>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.ListRequest">
             <summary>Returns the rules in the access control list for the calendar.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new List request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.ListRequest.InitParameters">
-            <summary>Initializes List parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.ListRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1066,17 +1041,22 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.ListRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.Patch(Google.Apis.Calendar.v3.Data.AclRule,System.String,System.String)">
+             <summary>Updates an access control rule. This method supports patch semantics.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="ruleId">ACL rule identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.PatchRequest">
             <summary>Updates an access control rule. This method supports patch semantics.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.AclRule,System.String,System.String)">
             <summary>Constructs a new Patch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.PatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.PatchRequest.InitParameters">
-            <summary>Initializes Patch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.PatchRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1088,6 +1068,9 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.PatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.PatchRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1097,17 +1080,22 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.PatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.Update(Google.Apis.Calendar.v3.Data.AclRule,System.String,System.String)">
+             <summary>Updates an access control rule.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="ruleId">ACL rule identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.UpdateRequest">
             <summary>Updates an access control rule.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.AclRule,System.String,System.String)">
             <summary>Constructs a new Update request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.UpdateRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.UpdateRequest.InitParameters">
-            <summary>Initializes Update parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.UpdateRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1119,6 +1107,9 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.UpdateRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.UpdateRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1128,17 +1119,20 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.UpdateRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.Watch(Google.Apis.Calendar.v3.Data.Channel,System.String)">
+            <summary>Watch for changes to ACL resources.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.AclResource.WatchRequest">
             <summary>Watch for changes to ACL resources.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.AclResource.WatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Channel,System.String)">
             <summary>Constructs a new Watch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.WatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.AclResource.WatchRequest.InitParameters">
-            <summary>Initializes Watch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.WatchRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1169,6 +1163,9 @@
         <member name="P:Google.Apis.Calendar.v3.AclResource.WatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.WatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.WatchRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1177,6 +1174,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.AclResource.WatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.AclResource.WatchRequest.InitParameters">
+            <summary>Initializes Watch parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource">
             <summary>The "calendarList" collection of methods.</summary>
@@ -1192,42 +1192,11 @@
             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Get(System.String)">
-            <summary>Returns an entry on the user's calendar list.</summary>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Insert(Google.Apis.Calendar.v3.Data.CalendarListEntry)">
-            <summary>Adds an entry to the user's calendar list.</summary>
-            <param name="body">The body of the request.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.List">
-            <summary>Returns entries on the user's calendar list.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Patch(Google.Apis.Calendar.v3.Data.CalendarListEntry,System.String)">
-            <summary>Updates an entry on the user's calendar list. This method supports patch semantics.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Update(Google.Apis.Calendar.v3.Data.CalendarListEntry,System.String)">
-            <summary>Updates an entry on the user's calendar list.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Watch(Google.Apis.Calendar.v3.Data.Channel)">
-            <summary>Watch for changes to CalendarList resources.</summary>
-            <param name="body">The body of the request.</param>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.DeleteRequest">
             <summary>Deletes an entry on the user's calendar list.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new Delete request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.DeleteRequest.InitParameters">
-            <summary>Initializes Delete parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.DeleteRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1242,14 +1211,19 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.DeleteRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Get(System.String)">
+            <summary>Returns an entry on the user's calendar list.</summary>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.GetRequest">
             <summary>Returns an entry on the user's calendar list.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new Get request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.GetRequest.InitParameters">
-            <summary>Initializes Get parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.GetRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1264,17 +1238,18 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.GetRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Insert(Google.Apis.Calendar.v3.Data.CalendarListEntry)">
+            <summary>Adds an entry to the user's calendar list.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest">
             <summary>Adds an entry to the user's calendar list.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.CalendarListEntry)">
             <summary>Constructs a new Insert request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.InitParameters">
-            <summary>Initializes Insert parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.ColorRgbFormat">
             <summary>Whether to use the foregroundColor and backgroundColor fields to write the calendar colors
@@ -1283,6 +1258,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -1293,14 +1271,17 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.List">
+            <summary>Returns entries on the user's calendar list.</summary>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.ListRequest">
             <summary>Returns entries on the user's calendar list.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
             <summary>Constructs a new List request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.InitParameters">
-            <summary>Initializes List parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.SyncToken">
             <summary>Token obtained from the nextSyncToken field returned on the last page of results from the
@@ -1320,6 +1301,22 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRole">
             <summary>The minimum access role for the user in the returned entries. Optional. The default is no
             restriction.</summary>
+        </member>
+        <member name="T:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum">
+            <summary>The minimum access role for the user in the returned entries. Optional. The default is no
+            restriction.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.FreeBusyReader">
+            <summary>The user can read free/busy information.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.Owner">
+            <summary>The user can read and modify events and access control lists.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.Reader">
+            <summary>The user can read events that are not private.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.Writer">
+            <summary>The user can read and modify events.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MaxResults">
             <summary>Maximum number of entries returned on one result page. By default the value is 100 entries. The
@@ -1341,33 +1338,20 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
-        <member name="T:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum">
-            <summary>The minimum access role for the user in the returned entries. Optional. The default is no
-            restriction.</summary>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
         </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.FreeBusyReader">
-            <summary>The user can read free/busy information.</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.Owner">
-            <summary>The user can read and modify events and access control lists.</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.Reader">
-            <summary>The user can read events that are not private.</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.CalendarListResource.ListRequest.MinAccessRoleEnum.Writer">
-            <summary>The user can read and modify events.</summary>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Patch(Google.Apis.Calendar.v3.Data.CalendarListEntry,System.String)">
+            <summary>Updates an entry on the user's calendar list. This method supports patch semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
         </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest">
             <summary>Updates an entry on the user's calendar list. This method supports patch semantics.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.CalendarListEntry,System.String)">
             <summary>Constructs a new Patch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.InitParameters">
-            <summary>Initializes Patch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1381,6 +1365,9 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1390,17 +1377,20 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Update(Google.Apis.Calendar.v3.Data.CalendarListEntry,System.String)">
+            <summary>Updates an entry on the user's calendar list.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest">
             <summary>Updates an entry on the user's calendar list.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.CalendarListEntry,System.String)">
             <summary>Constructs a new Update request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.InitParameters">
-            <summary>Initializes Update parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1414,6 +1404,9 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1423,17 +1416,18 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.Watch(Google.Apis.Calendar.v3.Data.Channel)">
+            <summary>Watch for changes to CalendarList resources.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest">
             <summary>Watch for changes to CalendarList resources.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Channel)">
             <summary>Constructs a new Watch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.InitParameters">
-            <summary>Initializes Watch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.SyncToken">
             <summary>Token obtained from the nextSyncToken field returned on the last page of results from the
@@ -1454,29 +1448,6 @@
             <summary>The minimum access role for the user in the returned entries. Optional. The default is no
             restriction.</summary>
         </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.MaxResults">
-            <summary>Maximum number of entries returned on one result page. By default the value is 100 entries. The
-            page size can never be larger than 250 entries. Optional.</summary>
-            [minimum: 1]
-        </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.PageToken">
-            <summary>Token specifying which result page to return. Optional.</summary>
-        </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.ShowHidden">
-            <summary>Whether to show hidden entries. Optional. The default is False.</summary>
-        </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.Body">
-            <summary>Gets or sets the body of this request.</summary>
-        </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.MethodName">
-            <summary>Gets the method name.</summary>
-        </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.HttpMethod">
-            <summary>Gets the HTTP method.</summary>
-        </member>
-        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.RestPath">
-            <summary>Gets the REST path.</summary>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.MinAccessRoleEnum">
             <summary>The minimum access role for the user in the returned entries. Optional. The default is no
             restriction.</summary>
@@ -1493,6 +1464,35 @@
         <member name="F:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.MinAccessRoleEnum.Writer">
             <summary>The user can read and modify events.</summary>
         </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.MaxResults">
+            <summary>Maximum number of entries returned on one result page. By default the value is 100 entries. The
+            page size can never be larger than 250 entries. Optional.</summary>
+            [minimum: 1]
+        </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.PageToken">
+            <summary>Token specifying which result page to return. Optional.</summary>
+        </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.ShowHidden">
+            <summary>Whether to show hidden entries. Optional. The default is False.</summary>
+        </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarListResource.WatchRequest.InitParameters">
+            <summary>Initializes Watch parameter list.</summary>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource">
             <summary>The "calendars" collection of methods.</summary>
         </member>
@@ -1508,42 +1508,12 @@
             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Delete(System.String)">
-            <summary>Deletes a secondary calendar. Use calendars.clear for clearing all events on primary
-            calendars.</summary>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Get(System.String)">
-            <summary>Returns metadata for a calendar.</summary>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Insert(Google.Apis.Calendar.v3.Data.Calendar)">
-            <summary>Creates a secondary calendar.</summary>
-            <param name="body">The body of the request.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Patch(Google.Apis.Calendar.v3.Data.Calendar,System.String)">
-            <summary>Updates metadata for a calendar. This method supports patch semantics.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Update(Google.Apis.Calendar.v3.Data.Calendar,System.String)">
-            <summary>Updates metadata for a calendar.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource.ClearRequest">
             <summary>Clears a primary calendar. This operation deletes all events associated with the primary calendar
             of an account.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarsResource.ClearRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new Clear request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.ClearRequest.InitParameters">
-            <summary>Initializes Clear parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.ClearRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1558,15 +1528,21 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.ClearRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.ClearRequest.InitParameters">
+            <summary>Initializes Clear parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Delete(System.String)">
+            <summary>Deletes a secondary calendar. Use calendars.clear for clearing all events on primary
+            calendars.</summary>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource.DeleteRequest">
             <summary>Deletes a secondary calendar. Use calendars.clear for clearing all events on primary
             calendars.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new Delete request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.DeleteRequest.InitParameters">
-            <summary>Initializes Delete parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.DeleteRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1581,14 +1557,19 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.DeleteRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Get(System.String)">
+            <summary>Returns metadata for a calendar.</summary>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource.GetRequest">
             <summary>Returns metadata for a calendar.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new Get request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.GetRequest.InitParameters">
-            <summary>Initializes Get parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.GetRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1603,20 +1584,24 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.GetRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Insert(Google.Apis.Calendar.v3.Data.Calendar)">
+            <summary>Creates a secondary calendar.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest">
             <summary>Creates a secondary calendar.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Calendar)">
             <summary>Constructs a new Insert request.</summary>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.InitParameters">
-            <summary>Initializes Insert parameter list.</summary>
-        </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -1627,17 +1612,20 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Patch(Google.Apis.Calendar.v3.Data.Calendar,System.String)">
+            <summary>Updates metadata for a calendar. This method supports patch semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest">
             <summary>Updates metadata for a calendar. This method supports patch semantics.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Calendar,System.String)">
             <summary>Constructs a new Patch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.InitParameters">
-            <summary>Initializes Patch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1645,6 +1633,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -1655,17 +1646,20 @@
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.Update(Google.Apis.Calendar.v3.Data.Calendar,System.String)">
+            <summary>Updates metadata for a calendar.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest">
             <summary>Updates metadata for a calendar.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Calendar,System.String)">
             <summary>Constructs a new Update request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.InitParameters">
-            <summary>Initializes Update parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1673,6 +1667,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -1682,6 +1679,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.RestPath">
             <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.CalendarsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.ChannelsResource">
             <summary>The "channels" collection of methods.</summary>
@@ -1702,14 +1702,11 @@
         <member name="M:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Channel)">
             <summary>Constructs a new Stop request.</summary>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.InitParameters">
-            <summary>Initializes Stop parameter list.</summary>
-        </member>
         <member name="P:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -1719,6 +1716,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.RestPath">
             <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.ChannelsResource.StopRequest.InitParameters">
+            <summary>Initializes Stop parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.ColorsResource">
             <summary>The "colors" collection of methods.</summary>
@@ -1738,9 +1738,6 @@
         <member name="M:Google.Apis.Calendar.v3.ColorsResource.GetRequest.#ctor(Google.Apis.Services.IClientService)">
             <summary>Constructs a new Get request.</summary>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.ColorsResource.GetRequest.InitParameters">
-            <summary>Initializes Get parameter list.</summary>
-        </member>
         <member name="P:Google.Apis.Calendar.v3.ColorsResource.GetRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1749,6 +1746,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.ColorsResource.GetRequest.RestPath">
             <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.ColorsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource">
             <summary>The "events" collection of methods.</summary>
@@ -1766,83 +1766,11 @@
             
              <param name="eventId">Event identifier.</param>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Get(System.String,System.String)">
-             <summary>Returns an event.</summary>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="eventId">Event identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Import(Google.Apis.Calendar.v3.Data.Event,System.String)">
-            <summary>Imports an event. This operation is used to add a private copy of an existing event to a
-            calendar.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Insert(Google.Apis.Calendar.v3.Data.Event,System.String)">
-            <summary>Creates an event.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Instances(System.String,System.String)">
-             <summary>Returns instances of the specified recurring event.</summary>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="eventId">Recurring event identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.List(System.String)">
-            <summary>Returns events on the specified calendar.</summary>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Move(System.String,System.String,System.String)">
-             <summary>Moves an event to another calendar, i.e. changes an event's organizer.</summary>
-             <param name="calendarId">Calendar identifier of the source calendar where the event currently is on.</param>
-            
-             <param name="eventId">Event identifier.</param>
-             <param name="destination">Calendar identifier of the target
-             calendar where the event is to be moved to.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Patch(Google.Apis.Calendar.v3.Data.Event,System.String,System.String)">
-             <summary>Updates an event. This method supports patch semantics.</summary>
-             <param name="body">The body of the request.</param>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="eventId">Event identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.QuickAdd(System.String,System.String)">
-             <summary>Creates an event based on a simple text string.</summary>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="text">The text describing the event to be created.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Update(Google.Apis.Calendar.v3.Data.Event,System.String,System.String)">
-             <summary>Updates an event.</summary>
-             <param name="body">The body of the request.</param>
-             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-            
-             <param name="eventId">Event identifier.</param>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.Watch(Google.Apis.Calendar.v3.Data.Channel,System.String)">
-            <summary>Watch for changes to Events resources.</summary>
-            <param name="body">The body of the request.</param>
-            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
-            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.DeleteRequest">
             <summary>Deletes an event.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
             <summary>Constructs a new Delete request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.DeleteRequest.InitParameters">
-            <summary>Initializes Delete parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.DeleteRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1864,14 +1792,21 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.DeleteRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Get(System.String,System.String)">
+             <summary>Returns an event.</summary>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="eventId">Event identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.GetRequest">
             <summary>Returns an event.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
             <summary>Constructs a new Get request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.GetRequest.InitParameters">
-            <summary>Initializes Get parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.GetRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1904,18 +1839,22 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.GetRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Import(Google.Apis.Calendar.v3.Data.Event,System.String)">
+            <summary>Imports an event. This operation is used to add a private copy of an existing event to a
+            calendar.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.ImportRequest">
             <summary>Imports an event. This operation is used to add a private copy of an existing event to a
             calendar.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.ImportRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Event,System.String)">
             <summary>Constructs a new Import request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.ImportRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.ImportRequest.InitParameters">
-            <summary>Initializes Import parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ImportRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1928,6 +1867,9 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ImportRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.ImportRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ImportRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1937,17 +1879,20 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ImportRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.ImportRequest.InitParameters">
+            <summary>Initializes Import parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Insert(Google.Apis.Calendar.v3.Data.Event,System.String)">
+            <summary>Creates an event.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.InsertRequest">
             <summary>Creates an event.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Event,System.String)">
             <summary>Constructs a new Insert request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.InsertRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.InsertRequest.InitParameters">
-            <summary>Initializes Insert parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.InsertRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -1969,6 +1914,9 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.InsertRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.InsertRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -1978,14 +1926,21 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.InsertRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Instances(System.String,System.String)">
+             <summary>Returns instances of the specified recurring event.</summary>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="eventId">Recurring event identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.InstancesRequest">
             <summary>Returns instances of the specified recurring event.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.InstancesRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
             <summary>Constructs a new Instances request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.InstancesRequest.InitParameters">
-            <summary>Initializes Instances parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.InstancesRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -2042,14 +1997,19 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.InstancesRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.InstancesRequest.InitParameters">
+            <summary>Initializes Instances parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.List(System.String)">
+            <summary>Returns events on the specified calendar.</summary>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.ListRequest">
             <summary>Returns events on the specified calendar.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new List request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.ListRequest.InitParameters">
-            <summary>Initializes List parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ListRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -2058,6 +2018,17 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderBy">
             <summary>The order of the events returned in the result. Optional. The default is an unspecified, stable
             order.</summary>
+        </member>
+        <member name="T:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderByEnum">
+            <summary>The order of the events returned in the result. Optional. The default is an unspecified, stable
+            order.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderByEnum.StartTime">
+            <summary>Order by the start date/time (ascending). This is only available when querying single
+            events (i.e. the parameter singleEvents is True)</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderByEnum.Updated">
+            <summary>Order by last modification time (ascending).</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ListRequest.ShowHiddenInvitations">
             <summary>Whether to include hidden invitations in the result. Optional. The default is False.</summary>
@@ -2152,25 +2123,22 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.ListRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
-        <member name="T:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderByEnum">
-            <summary>The order of the events returned in the result. Optional. The default is an unspecified, stable
-            order.</summary>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
         </member>
-        <member name="F:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderByEnum.StartTime">
-            <summary>Order by the start date/time (ascending). This is only available when querying single
-            events (i.e. the parameter singleEvents is True)</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.EventsResource.ListRequest.OrderByEnum.Updated">
-            <summary>Order by last modification time (ascending).</summary>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Move(System.String,System.String,System.String)">
+             <summary>Moves an event to another calendar, i.e. changes an event's organizer.</summary>
+             <param name="calendarId">Calendar identifier of the source calendar where the event currently is on.</param>
+            
+             <param name="eventId">Event identifier.</param>
+             <param name="destination">Calendar identifier of the target
+             calendar where the event is to be moved to.</param>
         </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.MoveRequest">
             <summary>Moves an event to another calendar, i.e. changes an event's organizer.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.MoveRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
             <summary>Constructs a new Move request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.MoveRequest.InitParameters">
-            <summary>Initializes Move parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.MoveRequest.CalendarId">
             <summary>Calendar identifier of the source calendar where the event currently is on.</summary>
@@ -2194,17 +2162,22 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.MoveRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.MoveRequest.InitParameters">
+            <summary>Initializes Move parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Patch(Google.Apis.Calendar.v3.Data.Event,System.String,System.String)">
+             <summary>Updates an event. This method supports patch semantics.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="eventId">Event identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.PatchRequest">
             <summary>Updates an event. This method supports patch semantics.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Event,System.String,System.String)">
             <summary>Constructs a new Patch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.PatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.PatchRequest.InitParameters">
-            <summary>Initializes Patch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.PatchRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -2235,6 +2208,9 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.PatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.PatchRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -2244,14 +2220,21 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.PatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.QuickAdd(System.String,System.String)">
+             <summary>Creates an event based on a simple text string.</summary>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="text">The text describing the event to be created.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.QuickAddRequest">
             <summary>Creates an event based on a simple text string.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.QuickAddRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
             <summary>Constructs a new QuickAdd request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.QuickAddRequest.InitParameters">
-            <summary>Initializes QuickAdd parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.QuickAddRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -2273,17 +2256,22 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.QuickAddRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.QuickAddRequest.InitParameters">
+            <summary>Initializes QuickAdd parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Update(Google.Apis.Calendar.v3.Data.Event,System.String,System.String)">
+             <summary>Updates an event.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+             want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+            
+             <param name="eventId">Event identifier.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.UpdateRequest">
             <summary>Updates an event.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Event,System.String,System.String)">
             <summary>Constructs a new Update request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.InitParameters">
-            <summary>Initializes Update parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -2314,6 +2302,9 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -2323,17 +2314,20 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.Watch(Google.Apis.Calendar.v3.Data.Channel,System.String)">
+            <summary>Watch for changes to Events resources.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="calendarId">Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you
+            want to access the primary calendar of the currently logged in user, use the "primary" keyword.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.EventsResource.WatchRequest">
             <summary>Watch for changes to Events resources.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.EventsResource.WatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Channel,System.String)">
             <summary>Constructs a new Watch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.WatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.EventsResource.WatchRequest.InitParameters">
-            <summary>Initializes Watch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.WatchRequest.CalendarId">
             <summary>Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to
@@ -2342,6 +2336,17 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderBy">
             <summary>The order of the events returned in the result. Optional. The default is an unspecified, stable
             order.</summary>
+        </member>
+        <member name="T:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderByEnum">
+            <summary>The order of the events returned in the result. Optional. The default is an unspecified, stable
+            order.</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderByEnum.StartTime">
+            <summary>Order by the start date/time (ascending). This is only available when querying single
+            events (i.e. the parameter singleEvents is True)</summary>
+        </member>
+        <member name="F:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderByEnum.Updated">
+            <summary>Order by last modification time (ascending).</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.WatchRequest.ShowHiddenInvitations">
             <summary>Whether to include hidden invitations in the result. Optional. The default is False.</summary>
@@ -2430,6 +2435,9 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.WatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.WatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.EventsResource.WatchRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -2439,16 +2447,8 @@
         <member name="P:Google.Apis.Calendar.v3.EventsResource.WatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
-        <member name="T:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderByEnum">
-            <summary>The order of the events returned in the result. Optional. The default is an unspecified, stable
-            order.</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderByEnum.StartTime">
-            <summary>Order by the start date/time (ascending). This is only available when querying single
-            events (i.e. the parameter singleEvents is True)</summary>
-        </member>
-        <member name="F:Google.Apis.Calendar.v3.EventsResource.WatchRequest.OrderByEnum.Updated">
-            <summary>Order by last modification time (ascending).</summary>
+        <member name="M:Google.Apis.Calendar.v3.EventsResource.WatchRequest.InitParameters">
+            <summary>Initializes Watch parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.FreebusyResource">
             <summary>The "freebusy" collection of methods.</summary>
@@ -2469,14 +2469,11 @@
         <member name="M:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.FreeBusyRequest)">
             <summary>Constructs a new Query request.</summary>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.InitParameters">
-            <summary>Initializes Query parameter list.</summary>
-        </member>
         <member name="P:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.MethodName">
             <summary>Gets the method name.</summary>
@@ -2486,6 +2483,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.RestPath">
             <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.FreebusyResource.QueryRequest.InitParameters">
+            <summary>Initializes Query parameter list.</summary>
         </member>
         <member name="T:Google.Apis.Calendar.v3.SettingsResource">
             <summary>The "settings" collection of methods.</summary>
@@ -2500,21 +2500,11 @@
             <summary>Returns a single user setting.</summary>
             <param name="setting">The id of the user setting.</param>
         </member>
-        <member name="M:Google.Apis.Calendar.v3.SettingsResource.List">
-            <summary>Returns all user settings for the authenticated user.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.SettingsResource.Watch(Google.Apis.Calendar.v3.Data.Channel)">
-            <summary>Watch for changes to Settings resources.</summary>
-            <param name="body">The body of the request.</param>
-        </member>
         <member name="T:Google.Apis.Calendar.v3.SettingsResource.GetRequest">
             <summary>Returns a single user setting.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.SettingsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
             <summary>Constructs a new Get request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.SettingsResource.GetRequest.InitParameters">
-            <summary>Initializes Get parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.GetRequest.Setting">
             <summary>The id of the user setting.</summary>
@@ -2528,14 +2518,17 @@
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.GetRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.SettingsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.SettingsResource.List">
+            <summary>Returns all user settings for the authenticated user.</summary>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.SettingsResource.ListRequest">
             <summary>Returns all user settings for the authenticated user.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.SettingsResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
             <summary>Constructs a new List request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.SettingsResource.ListRequest.InitParameters">
-            <summary>Initializes List parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.ListRequest.PageToken">
             <summary>Token specifying which result page to return. Optional.</summary>
@@ -2561,17 +2554,18 @@
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.ListRequest.RestPath">
             <summary>Gets the REST path.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.SettingsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.SettingsResource.Watch(Google.Apis.Calendar.v3.Data.Channel)">
+            <summary>Watch for changes to Settings resources.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
         <member name="T:Google.Apis.Calendar.v3.SettingsResource.WatchRequest">
             <summary>Watch for changes to Settings resources.</summary>
         </member>
         <member name="M:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Calendar.v3.Data.Channel)">
             <summary>Constructs a new Watch request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.GetBody">
-            <summary>Returns the body of the request.</summary>
-        </member>
-        <member name="M:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.InitParameters">
-            <summary>Initializes Watch parameter list.</summary>
         </member>
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.PageToken">
             <summary>Token specifying which result page to return. Optional.</summary>
@@ -2591,6 +2585,9 @@
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.Body">
             <summary>Gets or sets the body of this request.</summary>
         </member>
+        <member name="M:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.MethodName">
             <summary>Gets the method name.</summary>
         </member>
@@ -2599,6 +2596,9 @@
         </member>
         <member name="P:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.RestPath">
             <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Calendar.v3.SettingsResource.WatchRequest.InitParameters">
+            <summary>Initializes Watch parameter list.</summary>
         </member>
     </members>
 </doc>

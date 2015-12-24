@@ -41,11 +41,9 @@
             this.riskAssessment = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.load = new System.Windows.Forms.Button();
-            this.save = new System.Windows.Forms.Button();
+            this.versionLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.versionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +147,7 @@
             resources.ApplyResources(this.riskAssessment, "riskAssessment");
             this.riskAssessment.Name = "riskAssessment";
             this.riskAssessment.UseVisualStyleBackColor = true;
+            this.riskAssessment.CheckedChanged += new System.EventHandler(this.riskAssessment_CheckedChanged);
             // 
             // label2
             // 
@@ -161,21 +160,12 @@
             this.label3.Name = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // load
+            // versionLabel
             // 
-            this.load.BackColor = System.Drawing.Color.PaleGreen;
-            resources.ApplyResources(this.load, "load");
-            this.load.Name = "load";
-            this.load.UseVisualStyleBackColor = false;
-            this.load.Click += new System.EventHandler(this.load_Click);
-            // 
-            // save
-            // 
-            this.save.BackColor = System.Drawing.Color.PaleGreen;
-            resources.ApplyResources(this.save, "save");
-            this.save.Name = "save";
-            this.save.UseVisualStyleBackColor = false;
-            this.save.Click += new System.EventHandler(this.save_Click);
+            resources.ApplyResources(this.versionLabel, "versionLabel");
+            this.versionLabel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Click += new System.EventHandler(this.versionLabel_Click);
             // 
             // pictureBox2
             // 
@@ -191,21 +181,12 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // versionLabel
-            // 
-            resources.ApplyResources(this.versionLabel, "versionLabel");
-            this.versionLabel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Click += new System.EventHandler(this.versionLabel_Click);
-            // 
             // appWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.Controls.Add(this.versionLabel);
-            this.Controls.Add(this.save);
-            this.Controls.Add(this.load);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.riskAssessment);
@@ -247,8 +228,6 @@
         private System.Windows.Forms.CheckBox riskAssessment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button load;
-        private System.Windows.Forms.Button save;
         private System.Windows.Forms.Label versionLabel;
     }
 }

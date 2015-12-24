@@ -8,6 +8,11 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using static BDER.Form2;
 
 namespace BDER
@@ -44,89 +49,152 @@ namespace BDER
         private void submit_Click(object sender, EventArgs e)
         {
             Object selectedTeacher = teacher.SelectedItem;
-            String selectedDate = calendar.Value.ToString("dd/MM");
+            int selectedTeacherIndex = teacher.SelectedIndex;
+
+            List<string> colourList = new List<string>();
+            for(int i = 0; i < 10; i++)
+            {
+                colourList.Add(i.ToString());
+            }
+
+            string year1 = calendar.Value.ToString("yyyy");
+            string month1 = calendar.Value.ToString("MM");
+            string day1 = calendar.Value.ToString("dd");
+
+            int year = int.Parse(year1);
+            int month = int.Parse(month1);
+            int day = int.Parse(day1);
+
             Object selectedYearGroup = yearGroup.SelectedItem;
             Object selectedGroup = groups.SelectedItem;
+
             Object selectedPeriod = period.SelectedItem;
+
+            string hour = "00";
+            string minute = "00";
+            string finishMinute = "00";
+            string finishHour = "00";
+
+            switch (selectedPeriod.ToString())
+            {
+                case "Period 1":
+                    hour = "09";
+                    minute = "05";
+                    finishMinute = "50";
+                    finishHour = "09";
+                    break;
+
+                case "Period 2":
+                    hour = "09";
+                    minute = "55";
+                    finishMinute = "45";
+                    finishHour = "10";
+                    break;
+
+                case "Period 3":
+                    hour = "11";
+                    minute = "05";
+                    finishMinute = "00";
+                    finishHour = "12";
+                    break;
+
+                case "Period 4":
+                    hour = "12";
+                    minute = "05";
+                    finishMinute = "50";
+                    finishHour = "12";
+                    break;
+
+                case "Period 5":
+                    hour = "14";
+                    minute = "10";
+                    finishMinute = "00";
+                    finishHour = "15";
+                    break;
+
+                case "Period 6":
+                    hour = "15";
+                    minute = "05";
+                    finishMinute = "55";
+                    finishHour = "16";
+                    break;
+            }
+
             Object selectedEquipment = equipment.Text;
             Object selectedHazcards = hazcards.Text;
             Boolean selectedRiskAssessment = riskAssessment.Checked;
-            /* (selectedTeacher.ToString() != null && selectedYearGroup.ToString() != null && selectedGroup.ToString() != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != "Enter Equipment here...." && selectedHazcards.ToString() != "Enter Hazcards here...." && selectedRiskAssessment) */
-            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != null && selectedRiskAssessment)
+
+            UserCredential credential;
+
+            string[] Scopes = { CalendarService.Scope.Calendar };
+            using (var stream =
+                new FileStream("client_secret.json", FileMode.Open, FileAccess.Read))
             {
-                /* With thanks to http://stackoverflow.com/questions/19911230/sending-email-through-outlook-2010-via-c-sharp */
-                Microsoft.Office.Interop.Outlook.Application app = new Microsoft.Office.Interop.Outlook.Application();
-                Microsoft.Office.Interop.Outlook.MailItem mailItem = app.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
-                mailItem.Subject = "Practical Request from " + selectedTeacher.ToString() + " on " + selectedDate;
-                mailItem.To = "technicians@gsal.org.uk";
-                mailItem.HTMLBody = (@selectedTeacher + " has requested the following equipment on " + selectedDate + " during " + selectedPeriod + ":<br><h1 style='color:blue'> " + selectedEquipment + "</h1><br><br><h3>Sent with QuickPractical a.k.a Biology Department Equipment Requisition</h3>");
-                mailItem.Importance = Outlook.OlImportance.olImportanceHigh;
+                string credPath = System.Environment.GetFolderPath(
+                    System.Environment.SpecialFolder.Personal);
+                credPath = Path.Combine(credPath, ".credentials/calendar-dotnet-quickstart");
 
-                string theTime = "";
-                switch (selectedPeriod.ToString())
-                {
-                    case "Period 1":
-                        theTime = "09:00";
-                        break;
-
-                    case "Period 2":
-                        theTime = "09:55";
-                        break;
-
-                    case "Period 3":
-                        theTime = "11:05";
-                        break;
-
-                    case "Period 4":
-                        theTime = "12:00";
-                        break;
-
-                    case "Period 5":
-                        theTime = "2:10";
-                        break;
-
-                    case "Period 6":
-                        theTime = "3:00";
-                        break;
-                }
-
-                string schLocation = "";
-                string schSubject = mailItem.Subject;
-                string schDescription = "";
-                System.DateTime schBeginDate = Convert.ToDateTime(selectedDate);
-                System.DateTime schEndDate = Convert.ToDateTime(selectedDate);
-                String[] contents = { "BEGIN:VCALENDAR",
-                "PRODID: -//Flo Inc.//FloSoft//EN",
-                "BEGIN: VEVENT",
-                "DTSTART:" +schBeginDate.ToUniversalTime().ToString("yyyyMMdd\\THHmmss\\Z") + theTime,
-                "DTEND:" +schEndDate.ToUniversalTime().ToString("yyyyMMdd\\THHmmss\\Z") + theTime,
-                "LOCATION:" +schLocation,
-                "DESCRIPTION; ENCODING = QUOTED - PRINTABLE:" +schDescription,
-                "SUMMARY:" +schSubject, "PRIORITY: 3",
-                "END: VEVENT", "END: VCALENDAR" };
-
-                string exeRuntimeDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-
-                System.IO.DirectoryInfo dr = new System.IO.DirectoryInfo(exeRuntimeDirectory);
-                if (!dr.Exists)
-                {
-                    dr.Create();
-                }
-                System.IO.File.WriteAllLines(exeRuntimeDirectory + "\\" +"reminder2.ics", contents);
-
-                String whereTheIcsIs = exeRuntimeDirectory += "\\reminder2.ics";
-                mailItem.Attachments.Add(whereTheIcsIs);
-
-                mailItem.Display(true);
-
-                MessageBox.Show("Your request has been sent successfully.");
-                System.Windows.Forms.Application.Exit();
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    GoogleClientSecrets.Load(stream).Secrets,
+                    Scopes,
+                    "user",
+                    CancellationToken.None,
+                    new FileDataStore(credPath, true)).Result;
+                Console.WriteLine("Credential file saved to: " + credPath);
             }
-            else
+
+            // Create Google Calendar API service.
+            var service = new CalendarService(new BaseClientService.Initializer()
             {
-                MessageBox.Show(@"You have either left some boxes blank or filled them out incorrectly.
-Make sure you have confirmed a risk assessment has been carried out.", "Warning");
-            }
+                HttpClientInitializer = credential,
+                ApplicationName = "BDER 2015",
+            });
+
+            // Define parameters of request.
+            EventsResource.ListRequest request = service.Events.List("lmaa730d1os7pj3o0dqdfe920o@group.calendar.google.com");
+            request.TimeMin = DateTime.Now;
+            request.ShowDeleted = false;
+            request.SingleEvents = true;
+            request.MaxResults = 10;
+            request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+
+            string StartTime = (year.ToString() + "/" + month.ToString() + "/" + day.ToString() + " " + hour.ToString() + ":" + minute.ToString() + ":00");
+
+            Event newEvent = new Event()
+            {
+                Summary = "Practical Request from " + selectedTeacher,
+                Location = "GSAL",
+                Description = (@selectedTeacher + " - " + selectedGroup + " - " + selectedPeriod + ".\nEquipment Requested:\n" + selectedEquipment + "\nTeacher has confirmed a risk assessment has been carried out.\nReferenced Hazcards:\n" + selectedHazcards),
+                Start = new EventDateTime()
+                {
+                    DateTime = new DateTime(year, month, day, Int32.Parse(hour), Int32.Parse(minute), 0),
+                    TimeZone = "Europe/London",
+                },
+                End = new EventDateTime()
+                {
+                    DateTime = new DateTime(year, month, day, Int32.Parse(finishHour), Int32.Parse(finishMinute), 0),
+                    TimeZone = "Europe/London",
+                },
+                /*Attendees = new EventAttendee[]
+                {
+                    new EventAttendee() { Email = "technicans@gsal.org.uk" },
+                },*/
+                Reminders = new Event.RemindersData()
+                {
+                    UseDefault = false,
+                    Overrides = new EventReminder[] {
+                        new EventReminder() { Method = "popup", Minutes = 15 },
+                    }
+                },
+                ColorId = colourList[selectedTeacherIndex],
+            };
+
+            String calendarId = "lmaa730d1os7pj3o0dqdfe920o@group.calendar.google.com";
+            EventsResource.InsertRequest newRequest = service.Events.Insert(newEvent, calendarId);
+            Event createdEvent = newRequest.Execute();
+
+            string url = createdEvent.HtmlLink;
+            Form2 finishedDialogue = new Form2(url);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -144,108 +212,17 @@ Make sure you have confirmed a risk assessment has been carried out.", "Warning"
             
         }
 
-        private void save_Click(object sender, EventArgs e)
-        {
-            Object selectedTeacher = teacher.SelectedItem;
-            String selectedDate = calendar.Value.ToString("dd/MM");
-            Object selectedYearGroup = yearGroup.SelectedItem;
-            Object selectedGroup = groups.SelectedItem;
-            Object selectedPeriod = period.SelectedItem;
-            Object selectedEquipment = equipment.Text;
-            Object selectedHazcards = hazcards.Text;
-            Boolean selectedRiskAssessment = riskAssessment.Checked;
-
-            if (selectedTeacher != null && selectedYearGroup != null && selectedGroup != null && selectedPeriod.ToString() != null && selectedEquipment.ToString() != null && selectedHazcards.ToString() != null && selectedRiskAssessment)
-            {
-                bool leave = false;
-
-                while (leave != true)
-                {
-                    Form2 saveWindow = new Form2();
-                    saveWindow.ShowDialog();
-                    string requestName = ControlID.TextData;
-
-                    MessageBox.Show("Saved the request.");
-
-                    using (StreamWriter sw = File.AppendText(@"history.txt"))
-                    {
-                        sw.WriteLine("BEGINREQUEST");
-                        sw.WriteLine("BEGINNAME");
-                        sw.WriteLine(requestName);
-                        sw.WriteLine("ENDNAME");
-                        sw.WriteLine("BEGINTAGS");
-                        sw.WriteLine("ENDTAGS");
-                        sw.WriteLine("BEGINDATA");
-                        sw.WriteLine(selectedTeacher);
-                        sw.WriteLine(selectedDate);
-                        sw.WriteLine(selectedYearGroup);
-                        sw.WriteLine(selectedGroup);
-                        sw.WriteLine(selectedPeriod);
-                        sw.WriteLine(selectedEquipment);
-                        sw.WriteLine(selectedHazcards);
-                        sw.WriteLine(selectedRiskAssessment);
-                        sw.WriteLine("ENDDATA");
-                        sw.WriteLine("ENDREQUEST");
-                    }
-
-                    string path = @"historyPart.txt";
-                    System.IO.File.WriteAllText(path, string.Empty);
-                    leave = true;
-                }
-
-            } else
-            {
-                MessageBox.Show("Before you can save, you must complete the form.", "Cannot continue");
-            }
-        }
-
-        private void load_Click(object sender, EventArgs e)
-        {
-            /* Read the file in, line by line */
-            string[] lines = System.IO.File.ReadAllLines(@"history.txt");
-            var tagList = new List<string>();
-            int counter = 0;
-            string experimentName = "";
-
-            while (counter < lines.Length)
-            {
-                /* Look for "BEGINNAME" */
-                if (lines[counter] == "BEGINNAME")
-                {
-                    experimentName = lines[counter + 1];
-                }
-
-                    /* Look for "BEGINTAGS" */
-                    if (lines[counter] == "BEGINTAGS")
-                {
-                    while (lines[counter] != "ENDTAGS")
-                    {
-                        counter += 1;
-                        tagList.Add(lines[counter]);
-                    }
-
-                    /* Remove the "ENDTAGS" that appears on the end of the list */
-                    tagList.RemoveAt((tagList.Count - 1));
-                }
-
-                if (lines[counter] == "BEGINDATA")
-                {
-                    MessageBox.Show("This");
-                }
-
-                /* Prevent IndexOutOfRange Error */
-                if (counter < lines.Length)
-                {
-                    counter += 1;
-                }
-            }
-
-            Form3 loadWindow = new Form3();
-            loadWindow.Show();
-        }
-
         private void versionLabel_Click(object sender, EventArgs e)
         {
+        }
+
+        private void upload_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void riskAssessment_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
