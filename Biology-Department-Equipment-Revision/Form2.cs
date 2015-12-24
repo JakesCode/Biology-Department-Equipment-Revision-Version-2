@@ -14,7 +14,13 @@ namespace BDER
     {
         public Form2(string url)
         {
+            StaticVariables.HTMLurl = url;
             InitializeComponent();
+        }
+
+        public static class StaticVariables
+        {
+            public static string HTMLurl { get; set; }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,6 +35,12 @@ namespace BDER
 
         private void button1_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start(StaticVariables.HTMLurl);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

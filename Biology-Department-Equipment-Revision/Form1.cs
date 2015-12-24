@@ -195,6 +195,8 @@ namespace BDER
 
             string url = createdEvent.HtmlLink;
             Form2 finishedDialogue = new Form2(url);
+            finishedDialogue.ShowDialog();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
