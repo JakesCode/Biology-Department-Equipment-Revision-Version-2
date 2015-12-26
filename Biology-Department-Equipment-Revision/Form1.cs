@@ -347,17 +347,16 @@ namespace BDER
             }
 
             // Import the data into the various form elements //
-            teacher.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[0]));
-            yearGroup.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[1]));
-            groups.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[2]));
-            period.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[3]));
+            teacher.SelectedItem = importedData[0];
+            yearGroup.SelectedItem = importedData[1];
+            groups.SelectedItem = importedData[2];
+            period.SelectedItem = importedData[3];
             int current = 4;
             if (importedData[current] == "BEGIN EQUIPMENT")
             {
                 current += 1;
                 while (importedData[current] != "END EQUIPMENT")
                 {
-                    MessageBox.Show(importedData[current]);
                     importedData[current] = importedData[current].Replace("NEWLINE", Environment.NewLine);
                     equipment.Text += importedData[current];
                     current += 1;
