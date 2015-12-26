@@ -222,6 +222,7 @@
             this.Controls.Add(this.teacher);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "appWindow";

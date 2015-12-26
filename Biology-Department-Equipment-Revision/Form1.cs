@@ -323,6 +323,11 @@ namespace BDER
 
         }
 
+        private void HelpButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/JakesCode/Biology-Department-Equipment-Revision-Version-2/wiki/A-Complete-Guide");
+        }
+
         private void loadButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
