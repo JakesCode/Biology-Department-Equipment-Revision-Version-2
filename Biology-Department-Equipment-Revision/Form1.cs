@@ -250,7 +250,6 @@ namespace BDER
 
         private void versionLabel_Click(object sender, EventArgs e)
         {
-
         }
 
         private void upload_Click(object sender, EventArgs e)
