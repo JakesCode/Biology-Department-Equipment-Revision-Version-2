@@ -56,7 +56,7 @@ namespace BDER
             int selectedTeacherIndex = teacher.SelectedIndex;
 
             List<string> colourList = new List<string>();
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i < 9; i++)
             {
                 colourList.Add(i.ToString());
             }
@@ -197,10 +197,10 @@ namespace BDER
                             DateTime = new DateTime(year, month, day, Int32.Parse(finishHour), Int32.Parse(finishMinute), 0),
                             TimeZone = "Europe/London",
                         },
-                        /*Attendees = new EventAttendee[]
+                        Attendees = new EventAttendee[]
                         {
                             new EventAttendee() { Email = "technicans@gsal.org.uk" },
-                        },*/
+                        },
                         Reminders = new Event.RemindersData()
                         {
                             UseDefault = false,
