@@ -117,3 +117,4 @@ C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revis
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Zlib.Portable.xml
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form3.resources
+C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form3.resources

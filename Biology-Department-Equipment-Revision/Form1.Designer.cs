@@ -79,7 +79,7 @@
             resources.ApplyResources(this.calendar, "calendar");
             this.calendar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.calendar.Name = "calendar";
-            this.calendar.Value = new System.DateTime(2015, 12, 18, 0, 0, 0, 0);
+            this.calendar.Value = new System.DateTime(2015, 12, 26, 0, 0, 0, 0);
             this.calendar.ValueChanged += new System.EventHandler(this.calendar_ValueChanged);
             // 
             // yearGroup
@@ -130,6 +130,7 @@
             // 
             resources.ApplyResources(this.equipment, "equipment");
             this.equipment.Name = "equipment";
+            this.equipment.TextChanged += new System.EventHandler(this.equipment_TextChanged);
             // 
             // hazcards
             // 

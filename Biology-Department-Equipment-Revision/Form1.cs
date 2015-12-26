@@ -20,6 +20,7 @@ namespace BDER
     {
         // Public Variables //
         public static bool loadedFile { get; set; }
+        public static Event publicCreatedEvent { get; set; }
 
         public appWindow()
         {
@@ -178,51 +179,93 @@ namespace BDER
 
                 string StartTime = (year.ToString() + "/" + month.ToString() + "/" + day.ToString() + " " + hour.ToString() + ":" + minute.ToString() + ":00");
 
-                Event newEvent = new Event()
-                {
-                    Summary = "Practical Request from " + selectedTeacher,
-                    Location = "GSAL",
-                    Description = (@selectedTeacher + " - " + selectedGroup + " - " + selectedPeriod + ".\n\nEquipment Requested:\n" + selectedEquipment + "\n\nTeacher has confirmed a risk assessment has been carried out.\n\nReferenced Hazcards:\n" + selectedHazcards),
-                    Start = new EventDateTime()
-                    {
-                        DateTime = new DateTime(year, month, day, Int32.Parse(hour), Int32.Parse(minute), 0),
-                        TimeZone = "Europe/London",
-                    },
-                    End = new EventDateTime()
-                    {
-                        DateTime = new DateTime(year, month, day, Int32.Parse(finishHour), Int32.Parse(finishMinute), 0),
-                        TimeZone = "Europe/London",
-                    },
-                    /*Attendees = new EventAttendee[]
-                    {
-                        new EventAttendee() { Email = "technicans@gsal.org.uk" },
-                    },*/
-                    Reminders = new Event.RemindersData()
-                    {
-                        UseDefault = false,
-                        Overrides = new EventReminder[] {
-                        new EventReminder() { Method = "popup", Minutes = 15 },
-                    }
-                    },
-                    ColorId = colourList[selectedTeacherIndex],
-                };
 
-                String calendarId = "lmaa730d1os7pj3o0dqdfe920o@group.calendar.google.com";
-                EventsResource.InsertRequest newRequest = service.Events.Insert(newEvent, calendarId);
-                Event createdEvent = newRequest.Execute();
+                if (dissectionBox.Checked == false)
+                {
+                    Event newEvent = new Event()
+                    {
+                        Summary = "Practical Request from " + selectedTeacher,
+                        Location = "GSAL",
+                        Description = (@selectedTeacher + " - " + selectedGroup + " - " + selectedPeriod + ".\n\nEquipment Requested:\n" + selectedEquipment + "\n\nTeacher has confirmed a risk assessment has been carried out.\n\nReferenced Hazcards:\n" + selectedHazcards),
+                        Start = new EventDateTime()
+                        {
+                            DateTime = new DateTime(year, month, day, Int32.Parse(hour), Int32.Parse(minute), 0),
+                            TimeZone = "Europe/London",
+                        },
+                        End = new EventDateTime()
+                        {
+                            DateTime = new DateTime(year, month, day, Int32.Parse(finishHour), Int32.Parse(finishMinute), 0),
+                            TimeZone = "Europe/London",
+                        },
+                        /*Attendees = new EventAttendee[]
+                        {
+                            new EventAttendee() { Email = "technicans@gsal.org.uk" },
+                        },*/
+                        Reminders = new Event.RemindersData()
+                        {
+                            UseDefault = false,
+                            Overrides = new EventReminder[] {
+                            new EventReminder() { Method = "popup", Minutes = 15 },
+                            }
+                        },
+                        ColorId = colourList[selectedTeacherIndex],
+                    };
+                    String calendarId = "lmaa730d1os7pj3o0dqdfe920o@group.calendar.google.com";
+                    EventsResource.InsertRequest newRequest = service.Events.Insert(newEvent, calendarId);
+                    Event createdEvent = newRequest.Execute();
+                    publicCreatedEvent = createdEvent;
+                } else
+                {
+                    Event newEvent = new Event()
+                    {
+                        Summary = "Practical Request from " + selectedTeacher,
+                        Location = "GSAL",
+                        Description = (@selectedTeacher + " - " + selectedGroup + " - " + selectedPeriod + ".\n\nEquipment Requested:\n" + selectedEquipment + "\n\nTeacher has confirmed a risk assessment has been carried out.\n\nReferenced Hazcards:\n" + selectedHazcards),
+                        Start = new EventDateTime()
+                        {
+                            DateTime = new DateTime(year, month, day, Int32.Parse(hour), Int32.Parse(minute), 0),
+                            TimeZone = "Europe/London",
+                        },
+                        End = new EventDateTime()
+                        {
+                            DateTime = new DateTime(year, month, day, Int32.Parse(finishHour), Int32.Parse(finishMinute), 0),
+                            TimeZone = "Europe/London",
+                        },
+                        /*Attendees = new EventAttendee[]
+                        {
+                            new EventAttendee() { Email = "technicans@gsal.org.uk" },
+                        },*/
+                        Reminders = new Event.RemindersData()
+                        {
+                            UseDefault = false,
+                            Overrides = new EventReminder[] {
+                            new EventReminder() { Method = "popup", Minutes = 15 },
+                            new EventReminder() { Method = "popup", Minutes = 1440 },
+                            new EventReminder() { Method = "email", Minutes = 1440 },
+                            }
+                        },
+                        ColorId = colourList[selectedTeacherIndex],
+                    };
+                    String calendarId = "lmaa730d1os7pj3o0dqdfe920o@group.calendar.google.com";
+                    EventsResource.InsertRequest newRequest = service.Events.Insert(newEvent, calendarId);
+                    Event createdEvent = newRequest.Execute();
+                    publicCreatedEvent = createdEvent;
+                }
+
+                
 
                 if (loadedFile == false)
                 {
                     Form3 nicknameDialogue = new Form3();
                     nicknameDialogue.ShowDialog();
-                    var lines = (selectedTeacher + Environment.NewLine + calendar.Value + Environment.NewLine + selectedYearGroup + Environment.NewLine + selectedGroup + Environment.NewLine + selectedPeriod + Environment.NewLine + selectedEquipment + Environment.NewLine + selectedHazcards + Environment.NewLine + dissectionBox.Checked);
-                    StreamWriter file = new StreamWriter(Directory.GetCurrentDirectory().ToString() + "\\history\\" + nicknameDialogue.ReturnText.Replace(" ", "") + ".bio");
+                    var lines = (selectedTeacher + Environment.NewLine + selectedYearGroup + Environment.NewLine + selectedGroup + Environment.NewLine + selectedPeriod + Environment.NewLine + "BEGIN EQUIPMENT" + Environment.NewLine + selectedEquipment.ToString().Replace(Environment.NewLine, "NEWLINE") + Environment.NewLine + "END EQUIPMENT" + Environment.NewLine + selectedHazcards + Environment.NewLine + dissectionBox.Checked);
+                    StreamWriter file = new StreamWriter(Directory.GetCurrentDirectory().ToString() + "\\history\\" + nicknameDialogue.ReturnText + ".bio");
                     file.WriteLine(lines);
                     file.Close();
                 }
 
 
-                string url = createdEvent.HtmlLink;
+                string url = publicCreatedEvent.HtmlLink;
                 Form2 finishedDialogue = new Form2(url);
                 finishedDialogue.ShowDialog();
                 this.Close();
@@ -305,16 +348,34 @@ namespace BDER
 
             // Import the data into the various form elements //
             teacher.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[0]));
-            calendar.Value = DateTime.ParseExact(importedData[1], "dd/MM/yyyy HH:mm:ss", null);
-            yearGroup.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[2]));
-            groups.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[3]));
-            period.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[4]));
-            equipment.Text = importedData[5];
-            hazcards.Text = importedData[6];
-            dissectionBox.Checked = Convert.ToBoolean(importedData[7]);
+            yearGroup.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[1]));
+            groups.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[2]));
+            period.SelectedIndex = importedData.FindIndex(x => x.StartsWith(importedData[3]));
+            int current = 4;
+            if (importedData[current] == "BEGIN EQUIPMENT")
+            {
+                current += 1;
+                while (importedData[current] != "END EQUIPMENT")
+                {
+                    MessageBox.Show(importedData[current]);
+                    importedData[current] = importedData[current].Replace("NEWLINE", Environment.NewLine);
+                    equipment.Text += importedData[current];
+                    current += 1;
+                }
+            }
 
-            MessageBox.Show("Loaded the file.\nFor security reasons, saving/loading the 'risk assessment' checkbox has been disabled. You must check this box yourself.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            current += 1;
+            hazcards.Text = importedData[current];
+            current += 1;
+            dissectionBox.Checked = Convert.ToBoolean(importedData[current]);
+
+            MessageBox.Show("Loaded the file.\nFor security reasons, saving/loading the 'risk assessment' checkbox has been disabled. You must check this box yourself.\nThe date is also not read in, allowing you to choose a new date yourself.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             loadedFile = true;
+        }
+
+        private void equipment_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
