@@ -43,7 +43,6 @@ C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revis
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.exe.manifest
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.application
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form2.resources
-C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\sq\BDER.resources.dll
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Google.Apis.Auth.dll
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Google.Apis.Auth.PlatformServices.dll
@@ -81,9 +80,6 @@ C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\B
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Zlib.Portable.xml
 C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form2.resources
-C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form3.resources
-C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form3.sq.resources
-C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\sq\BDER.resources.dll
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Google.Apis.Auth.dll
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Google.Apis.Auth.PlatformServices.dll
@@ -120,3 +116,4 @@ C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revis
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Jake (King of Cool)\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\bin\Debug\Zlib.Portable.xml
+C:\Users\Jake\Documents\GitHub\Biology-Department-Equipment-Revision-Version-2\Biology-Department-Equipment-Revision\obj\Debug\BDER.Form3.resources

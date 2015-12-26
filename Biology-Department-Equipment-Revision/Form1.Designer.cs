@@ -44,6 +44,8 @@
             this.versionLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dissectionBox = new System.Windows.Forms.CheckBox();
+            this.loadButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -181,11 +183,28 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // dissectionBox
+            // 
+            resources.ApplyResources(this.dissectionBox, "dissectionBox");
+            this.dissectionBox.Name = "dissectionBox";
+            this.dissectionBox.UseVisualStyleBackColor = true;
+            this.dissectionBox.CheckedChanged += new System.EventHandler(this.dissectionBox_CheckedChanged);
+            // 
+            // loadButton
+            // 
+            this.loadButton.BackColor = System.Drawing.Color.PaleGreen;
+            resources.ApplyResources(this.loadButton, "loadButton");
+            this.loadButton.Name = "loadButton";
+            this.loadButton.UseVisualStyleBackColor = false;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
             // appWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
+            this.Controls.Add(this.loadButton);
+            this.Controls.Add(this.dissectionBox);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -205,6 +224,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "appWindow";
+            this.Load += new System.EventHandler(this.appWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -229,6 +249,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.CheckBox dissectionBox;
+        private System.Windows.Forms.Button loadButton;
     }
 }
 
